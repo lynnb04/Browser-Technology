@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gegevens van de overledene</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./vraag1.css">
+  </head>
+
+
+  <body>
+    <main>
+        <!-- disclaimer: schoolopdracht -->
+        
+        <h1>1. Gegevens van de overledene</h1>
+
+        <form>
+            <h2>Vul hier de gegevens in van de overledene.</h2>
+            <fieldset>
+                <legend>1a</legend>
+                    <label for="voorletters-overledene">Voorletter(s)
+                        <input type="text" id="voorletters-overledene" name="voorletters-overledene" required /> <!-- value opslaan met javascript -->
+                    </label>
+
+                    <label for="tussenvoegsels-overledene">Tussenvoegsel(s)
+                        <input type="text" id="tussenvoegsels-overledene" name="tussenvoegsels-overledene" />
+                    </label>
+
+                    <label for="achternaam-overledene">Achternaam
+                        <input type="text" id="achternaam-overledene" name="achternaam-overledene" required />
+                    </label>
+
+                    <label for="bsn-overledene">Bsn overledene
+                        <input type="number" id="bsn-overledene" name="bsn-overledene" min="9" max="9" required /> <!-- accepteert alleen strings met cijfers -->
+                    </label>
+
+                    <label for="overlijdensdatum">Overlijdensdatum
+                        <input type="date" id="overlijdensdatum" name="overlijdensdatum" max="volgende dag" required /> <!-- bron:https://stackoverflow.com/questions/32378590/set-date-input-fields-max-date-to-today -->
+                    </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>1b</legend>
+                    <fieldset>
+                        <legend>Was de overledene getrouwd of had de overledene een geregistreerde partner op het moment van overlijden?</legend>
+                        <label for="partner-nee">Nee
+                            <input type="radio" id="partner-nee" name="partner" value="Nee" /> <!-- door naar 1c -->
+                        </label>
+                        <label for="partner-ja">Ja
+                            <input type="radio" id="partner-ja" name="partner" value="Ja" />
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Hadden de overledene en diens echtgenoot of geregistreerde partner huwelijkse of partnerschapsvoorwaarden laten vast leggen in een notariële akte?</legend>
+                        <label for="akte-nee">Nee
+                            <input type="radio" id="akte-nee" name="notariele-akte" value="Nee" /> <!-- door naar 1c -->
+                        </label>
+                        <label for="akte-ja">Ja
+                            <input type="radio" id="akte-ja" name="notariele-akte" value="Ja" /> <!-- bestand upload verschijnt -->
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Hadden de overledene en diens partner een finaal verrekenbeding?</legend>
+                        <label for="akte-nee">Nee
+                            <input type="radio" id="akte-nee" name="verrekenbeding" value="Nee" /> <!-- door naar 1c -->
+                        </label>
+                        <label for="akte-ja">Ja
+                            <input type="radio" id="akte-ja" name="verrekenbeding" value="Ja" />
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Datum huwelijkse of partnerschapsvoorwaarden</legend>
+                        <label for="dag">Dag
+                            <select id="dag" name="dag">
+                                <option value="1">1</option>
+                            </select>
+                        </label>
+                        <label for="maand">Maand
+                            <select id="maand" name="maand">
+                                <option value="januari">Januari</option>
+                            </select>
+                        </label>
+                        <label for="jaar">Jaar
+                            ...
+                        </label>
+                    </fieldset>
+            </fieldset>
+
+            <fieldset>
+                <legend>1c</legend>
+            </fieldset>
+
+            <fieldset>
+                <legend>1d</legend>
+            </fieldset>
+
+            <input type="submit" />
+        </form>
+    </main>
+
+    <script src="vraag1.js"></script>
+  </body>
+
+  
+</html>
