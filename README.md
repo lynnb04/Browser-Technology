@@ -20,6 +20,16 @@ Mijn repo voor het vak Browser Technology
 **Wat ga ik morgen doen?**  
     Verder met vraag 1. Ik wil de html structuur zo goed als af hebben zodat ik daarna kan kijken naar hoe je vragen verbergt/overslaat.    
 
+### Dinsdag 17/02
+**Wat heb ik vandaag gedaan?** 
+    Begonnen met Weekly Geek. Toen ben ik verder gegaan met de HTML van mijn formulier. Daarna heb ik CSS gedaan.    
+**Hoeveel tijd heeft me dat gekost?**  
+    Weekly Geek duurde een uur en ik heb in totaal 4 uur gewerkt aan mijn formulier.    
+**Wat heb ik geleerd?**  
+    Hoe je bij een datum picker een maximale datum in kan stellen met JavaScript.    
+**Wat ga ik de volgende les doen?**  
+    Zorgen dat de volgende vragen verborgen worden als ze nog niet aan de beurt zijn.
+
 
 ### Voortgang week 1
 **Wat heb ik deze week gedaan?**
