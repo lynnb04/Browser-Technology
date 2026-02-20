@@ -33,10 +33,10 @@ Mijn repo voor het vak Browser Technology
 
 ### Voortgang week 1
 **Wat heb ik deze week gedaan?**
-    ...  
+    Eerste opzet van vraag 1 gemaakt.  
 
 **Wat heb ik geleerd?**
-    ...  
+    Hoe je een maximale datum in kan stellen bij een datum picker.  
 
 **Hoe sluit dit aan bij mijn leerdoelen?**
     ...  
