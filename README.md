@@ -1,6 +1,9 @@
 # Browser-Technology
 Mijn repo voor het vak Browser Technology
 
+>[!NOTE]
+>Dit is een schoolproject!
+
 
 ## Mijn leerdoelen
 - Ik wil leren hoe ik creatieve en speelse interacties kan bouwen met HTML, CSS en JavaScript in plaats van “alleen functionele” interfaces.
@@ -32,11 +35,11 @@ Mijn repo voor het vak Browser Technology
 
 
 ### Voortgang week 1
-**Wat heb ik deze week gedaan?**
-    ...  
-
-**Wat heb ik geleerd?**
-    ...  
-
-**Hoe sluit dit aan bij mijn leerdoelen?**
-    ...  
+Gekregen feedback:
+- Laat namen overeenkomen met wat er in de database staat
+- Bij id's een - er tussen i.p.v. camelcase, leest fijner
+- Gebruik een date picker bij datum huwelijkse voorwaarden
+- Alle vragen op 1 pagina voor context in het formulier
+- Input veranderen naar button met type=submit
+- Schoolproject disclaimer in readme vermelden met note
+- Nu vooral focussen op het werkend maken, daarna verder met styling
