@@ -33,11 +33,11 @@
                     </label>
 
                     <label for="bsn-overledene">Bsn overledene
-                        <input type="number" id="bsn-overledene" name="bsn-overledene" min="9" max="9" required /> <!-- accepteert alleen strings met cijfers -->
+                        <input type="text" id="bsn-overledene" name="bsn-overledene" pattern="[0-9]{9}" max="9" required /> <!-- accepteert alleen strings met cijfers -->
                     </label>
 
                     <label for="overlijdensdatum">Overlijdensdatum
-                        <input type="date" id="datePicker1" name="overlijdensdatum" /> <!-- bron: https://stackoverflow.com/a/49916376 -->                
+                        <input type="date" id="datePicker1" name="overlijdensdatum" required /> <!-- bron: https://stackoverflow.com/a/49916376 -->                
                     </label>
             </fieldset>
 
