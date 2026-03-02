@@ -55,7 +55,7 @@ Gekregen feedback:
 **Wat ga ik morgen doen?**  
     Weekly geek opdracht maken en verder werken aan vragen 1b 1c 1d.    
 
-### Dinsdag 17/02
+### Dinsdag 04/03
 **Wat heb ik vandaag gedaan?** 
     ...
 **Hoeveel tijd heeft me dat gekost?**  
