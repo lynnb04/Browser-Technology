@@ -13,6 +13,7 @@ label {
     color: var(--ns-donkerblauw);
 }
 
+
 /* sections */
 /* //////// */
 /* bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:checked */
@@ -29,7 +30,7 @@ label {
   display: block;
 }
 
-
+/* test */
 #section-1a {
   border: 3px solid red;
 }

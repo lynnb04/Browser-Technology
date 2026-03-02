@@ -31,11 +31,11 @@ Mijn repo voor het vak Browser Technology
 **Wat heb ik geleerd?**  
     Hoe je bij een datum picker een maximale datum in kan stellen met JavaScript.    
 **Wat ga ik de volgende les doen?**  
-    Zorgen dat de volgende vragen verborgen worden als ze nog niet aan de beurt zijn.
+    Zorgen dat de volgende vragen verborgen worden als ze nog niet aan de beurt zijn.    
 
 
 ### Voortgang week 1
-Gekregen feedback:
+Gekregen feedback:    
 - Laat namen overeenkomen met wat er in de database staat
 - Bij id's een - er tussen i.p.v. camelcase, leest fijner
 - Gebruik een date picker bij datum huwelijkse voorwaarden
@@ -45,15 +45,15 @@ Gekregen feedback:
 - Nu vooral focussen op het werkend maken, daarna verder met styling
 
 
-### Maandag 16/02
+### Maandag 02/03
 **Wat heb ik vandaag gedaan?**  
-    ...
+    Uitleg gevolgd tot half 11, toen mijn weekly nerd verslagen geordend en readme opgeschoond. Toen ben ik bezig gegaan met zorgen dat vraag 1b pas zichtbaar wordt wanneer 1a correct is ingevuld. Daarna input type="text" en textbox role artikelen gelezen voor morgen.    
 **Hoeveel tijd heeft me dat gekost?**  
-    ...
+    Uitleg 1 uur, verslagen en readme ordenen duurde 2 uur, ik was tot kwart over 3 bezig met vraag 1a/1b. Artikelen gelezen tot 4 uur en toen de check-out gedaan.    
 **Wat heb ik geleerd?**  
-    ...
+    Selecteren met not en :has toepassen.    
 **Wat ga ik morgen doen?**  
-    ...
+    Weekly geek opdracht maken en verder werken aan vragen 1b 1c 1d.    
 
 ### Dinsdag 17/02
 **Wat heb ik vandaag gedaan?** 
