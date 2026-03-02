@@ -1,48 +1,8 @@
-/* custom properties */
-/* ///////////////// */
-:root {
-    --ns-geel: #FFC917;
-    --ns-donkerblauw: #003082;
-    --ns-lichtblauw: #0063D3;
-    --ns-wit: #FFFFFF;
-    --ns-grijs: #E6E6E9;
-    --disclaimer-bg: #E0531F;
-}
-
-@font-face {
-    font-family: 'nssans-regular';
-    src: url('../fonts/nssans-regular.woff2');
-}
-
-
-/* general */
-/* ////// */
-main {
-    font-family: 'nssans-regular', sans-serif;
-    margin: 1em;
-}
-
-body {
-    background-color: var(--ns-grijs);
-}
-
+/* headings */
+/* //////// */
 h1 {
     color: var(--ns-donkerblauw);
     text-align: center;
-}
-
-
-/* opmaak disclaimer */
-/* ///////////////// */
-p {
-    text-align: center;
-    background-color: var(--disclaimer-bg);
-    color: var(--ns-wit);
-    border-color: var(--disclaimer-bg);
-    border-style: solid;
-    border-width: 1em;
-    text-transform: uppercase;
-    font-weight: bold;
 }
 
 
