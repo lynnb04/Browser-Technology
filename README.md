@@ -36,7 +36,7 @@ Mijn repo voor het vak Browser Technology
 
 ### Voortgang week 1
 Gekregen feedback:    
-- Laat namen overeenkomen met wat er in de database staat
+- (over het algemeen handig) Laat namen overeenkomen met wat er in de database staat
 - Bij id's een - er tussen i.p.v. camelcase, leest fijner
 - Gebruik een date picker bij datum huwelijkse voorwaarden
 - Alle vragen op 1 pagina voor context in het formulier
@@ -57,10 +57,15 @@ Gekregen feedback:
 
 ### Dinsdag 04/03
 **Wat heb ik vandaag gedaan?** 
-    ...
+    Workshop gevolgd over validatie met JavaScript. Daarna heb ik de hele dag gewerkt aan progressive disclosure bij vraag 1, ik heb alle feedback van afgelopen week verwerkt. Toen alles netjes gemaakt en readme bijgewerkt.
 **Hoeveel tijd heeft me dat gekost?**  
-    ...
+    De workshop duurde ongeveer een uur en progressive disclosure heeft 4 uur geduurd. Readme en opschonen was een kwartiertje.
 **Wat heb ik geleerd?**  
-    ...
+    Progressive disclosure toepassen en veel geoefend met :has en not.
 **Wat ga ik de volgende les doen?**  
-    ...
+    Beginnen met vraag 2.
+
+
+### Bronnen
+Set date input field's max date to today: https://stackoverflow.com/a/49916376
+:checked explanation: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:checked
