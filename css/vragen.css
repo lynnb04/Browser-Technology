@@ -27,26 +27,49 @@ label {
 
 /* 1a ingevuld, 1b-1 open */
 #section-1a:not(:has(input:invalid)) ~ #section-1b {
-  display: block;
+    display: block;
+}
+#section-1b > fieldset:not(:first-of-type) {
+    display: none;
 }
 
 /* test */
 #section-1a {
-  border: 3px solid red;
+    border: 3px solid red;
 }
 
 #section-1a:not(:has(input:invalid)) {
-  border: 3px solid green;
+    border: 3px solid green;
 }
 
 /* 1b-1 ja > 1b-2 */
-
-/* 1b-2 ja > 1b-3 */
-
-/* 1b-3 ja > 1b-4 */
-
+#section-1b:has(#partner-ja:checked)
+    > fieldset:nth-of-type(2) {
+    display: block;
+}
 
 /* 1b-1 nee > 1c */
+
+/* 1b-2 ja > 1b-3 */
+#section-1b:has(#akte-ja:checked)
+    > fieldset:nth-of-type(3) {
+    display: block;
+}
+
+/* 1b-2 nee > 1c */
+
+/* 1b-3 ja > 1b-4 */
+#section-1b:has(#beding-ja:checked)
+    > fieldset:nth-of-type(4) {
+    display: block;
+}
+
+/* 1b-3 nee > 1c */
+
+/* 1b ingevuld, 1c-1 open */
+#section-1b:not(:has(input:invalid)) ~ #section-1c {
+    display: block;
+}
 
 
 
