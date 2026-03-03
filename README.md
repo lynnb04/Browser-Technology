@@ -57,14 +57,17 @@ Gekregen feedback:
 
 ### Dinsdag 04/03
 **Wat heb ik vandaag gedaan?** 
-    Workshop gevolgd over validatie met JavaScript. Daarna heb ik de hele dag gewerkt aan progressive disclosure bij vraag 1, ik heb alle feedback van afgelopen week verwerkt. Toen alles netjes gemaakt en readme bijgewerkt.
+    Workshop gevolgd over validatie met JavaScript. Daarna heb ik de hele dag gewerkt aan progressive disclosure bij vraag 1, ik heb alle feedback van afgelopen week verwerkt. Toen alles netjes gemaakt en readme bijgewerkt.    
 **Hoeveel tijd heeft me dat gekost?**  
-    De workshop duurde ongeveer een uur en progressive disclosure heeft 4 uur geduurd. Readme en opschonen was een kwartiertje.
+    De workshop duurde ongeveer een uur en progressive disclosure heeft 4 uur geduurd. Readme en opschonen was een kwartiertje.    
 **Wat heb ik geleerd?**  
-    Progressive disclosure toepassen en veel geoefend met :has en not.
+    Progressive disclosure toepassen en veel geoefend met :has en not.    
 **Wat ga ik de volgende les doen?**  
-    Beginnen met vraag 2.
+    Beginnen met vraag 2.    
 
+
+### Voortgang week 1
+Gekregen feedback:    
 
 ### Bronnen
 Set date input field's max date to today: https://stackoverflow.com/a/49916376
