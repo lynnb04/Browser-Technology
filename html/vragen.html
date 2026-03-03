@@ -75,27 +75,8 @@
 
                     <fieldset>
                         <legend>Datum huwelijkse of partnerschapsvoorwaarden</legend>
-                        <label for="dag-huwelijk">Dag
-                            <input type="text" id="dag-huwelijk" name="dag-huwelijk" inputmode="numeric" pattern="^([1-9]|[12][0-9]|3[01])$" maxlength="2" />
-                        </label>
-                        <label for="maand-huwelijk">Maand
-                            <select id="maand-huwelijk" name="maand-huwelijk">
-                                <option value="jan">Januari</option>
-                                <option value="feb">Februari</option>
-                                <option value="maa">Maart</option>
-                                <option value="apr">April</option>
-                                <option value="mei">Mei</option>
-                                <option value="jun">Juni</option>
-                                <option value="jul">Juli</option>
-                                <option value="aug">Augustus</option>
-                                <option value="sep">September</option>
-                                <option value="okt">Oktober</option>
-                                <option value="nov">November</option>
-                                <option value="dec">December</option>
-                            </select>
-                        </label>
-                        <label for="jaar-huwelijk">Jaar
-                            <input type="text" id="jaar-huwelijk" name="jaar-huwelijk" inputmode="numeric" pattern="^(19[0-9]{2}|[2-9][0-9]{3})$" maxlength="4" /> <!-- pattern = 1900-1999 mag en 2000+ mag, verdere validatie met javascript -->
+                        <label for="partnerschapsvoorwaarden">
+                            <input type="date" id="datePicker2" name="partnerschapsvoorwaarden" required /> <!-- bron: https://stackoverflow.com/a/49916376 -->                
                         </label>
                     </fieldset>
             </fieldset>
@@ -159,7 +140,7 @@
                         <input type="text" id="vestigingsplaats-notaris" name="vestigingsplaats-notaris" />
                     </label>  
                     <label for="datum-testament">Datum van (de laatste wijziging van) het testament
-                        <input type="date" id="datePicker2" name="datum-testament" /> <!-- bron: https://stackoverflow.com/a/49916376 -->                   
+                        <input type="date" id="datePicker3" name="datum-testament" /> <!-- bron: https://stackoverflow.com/a/49916376 -->                   
                     </label> 
                 </fieldset>
             </fieldset>
