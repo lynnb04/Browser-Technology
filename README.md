@@ -65,9 +65,25 @@ Gekregen feedback:
 **Wat ga ik de volgende les doen?**  
     Beginnen met vraag 2.    
 
-
-### Voortgang week 1
-Gekregen feedback:    
+### Voortgang week 2
+    Gekregen feedback:    
+    - 1a 1b andere namen geven
+    - required met javascript bij volgende vragen
+    - progressive disclosure korter schrijven
+    - validatie gaan doen
+    - styling meer op ns laten lijken
+    - user valid user invalid
+    - feedback bij niet/verkeerd ingevulde velden
+    - nesten
+    - :has not :has ect positief omdraaien
+    - utility class, zelfde soort opbouw van selectoren groeperen --> met Lisa naar kijken
+    - neem de gebruiker 'aan het handje mee' door het formulier
+    - belangrijke ontwerpkeuzes in readme zetten. waarom progressive disclosure op deze manier, waarom wel/geen javascript ect. neem mee in je gedachtengang
+    - progress bar
+    - progressive disclosure zag er goed uit
+    - mdn patterns voor validatie
+    jeppe: terugknop toevoegen, aan het einde een overzichtje maken van je antwoorden, ik zou css progressive disclosure toevoegen, validatie is goed gedaan
+    lisa: je hebt heel goed zelfinzicht, de uitleg bij het formulier erbij is fijn en geeft context, css opsplitsen
 
 ### Bronnen
 Set date input field's max date to today: https://stackoverflow.com/a/49916376
