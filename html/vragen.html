@@ -7,29 +7,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gegevens van de overledene</title>
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/vragen.css">
+    <link rel="stylesheet" href="/css/form.css">
+    <link rel="stylesheet" href="/css/progression.css">
 </head>
 
 
 <body>
     <main>
-        <p>Dit is een schoolproject</p>
+        <p>!! Dit is een schoolproject !!</p>
         
-        <h1>Gegevens van de overledene</h1>
+        <section>
+            <h1>Aangifteformulier erfbelasting</h1>
+        </section>
+
+        <section id="info">
+            <details open>
+                <summary>Waarom dit formulier?</summary>
+                <p>Met dit formulier doet u aangifte erfbelasting voor een overlijden in 2026 voor alle personen en instellingen die iets krijgen uit de nalatenschap. Dit zijn verkrijgers.</p>
+            </details>
+            <details>
+                <summary>Wie moet aangifte doen?</summary>
+                <p>Is er iemand als executeur aangewezen in het testament? En heeft die persoon geaccepteerd om executeur te zijn? Dan doet de executeur aangifte erfbelasting.</p>
+                <p>Is er geen executeur? Dan moeten de erfgenamen voor zichzelf en voor andere verkrijgers aangifte doen. Andere verkrijgers zijn bijvoorbeeld een kind dat een beroep doet op de legitieme portie of een persoon of instelling die een legaat krijgt.</p>
+            </details>
+            <details>
+                <summary>Hoe vult u het aangifteformulier in?</summary>
+                <ul>
+                    <li>Vul de gegevens in zoals ze waren op de dag van overlijden.</li>
+                    <li>Rond alle bedragen af op hele euro’s naar beneden (voorbeeld: € 1.350,99 = € 1.350).</li>
+                </ul>
+            </details>
+        </section>
+
+        <h2>Gegevens van de overledene</h2>
 
         <form>
             <fieldset id="section-1a">
-                <legend>1a - Vul de persoonsgegevens van de overledene in.</legend>
+                <legend>Persoonsgegevens</legend>
+                <p>Vul in de onderstaande vakken de persoonsgegevens van de overledene in.</p>
                     <label for="voorletters-overledene">Voorletter(s)
-                        <input type="text" id="voorletters-overledene" name="voorletters-overledene" required /> <!-- value opslaan met javascript -->
+                        <input type="text" id="voorletters-overledene" name="voorletters-overledene" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ' -]{2,50}$" required /> <!-- value opslaan met javascript -->
                     </label>
 
                     <label for="tussenvoegsels-overledene">Tussenvoegsel(s)
-                        <input type="text" id="tussenvoegsels-overledene" name="tussenvoegsels-overledene" />
+                        <input type="text" id="tussenvoegsels-overledene" name="tussenvoegsels-overledene" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ' -]{0,20}$" />
                     </label>
 
                     <label for="achternaam-overledene">Achternaam
-                        <input type="text" id="achternaam-overledene" name="achternaam-overledene" required />
+                        <input type="text" id="achternaam-overledene" name="achternaam-overledene" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ' -]{2,50}$" required />
                     </label>
 
                     <label for="bsn-overledene">Bsn overledene
@@ -42,7 +67,8 @@
             </fieldset>
 
             <fieldset id="section-1b">
-                <legend>1b - Vul de trouwgegevens van de overledene in.</legend>
+                <legend>Trouwgegevens</legend>
+                <!-- <p>Vul de trouwgegevens van de overledene in.</p> -->
                     <fieldset>
                         <legend>Was de overledene getrouwd of had de overledene een geregistreerde partner op het moment van overlijden?</legend>
                         <label for="partner-nee">Nee
@@ -82,7 +108,8 @@
             </fieldset>
 
             <fieldset id="section-1c">
-                <legend>1c</legend>
+                <legend>Kinderen</legend>
+                <!-- <p>Beantwoord de volgende vragen.</p> -->
                 <fieldset>
                         <legend>Had de overledene kinderen?</legend>
                         <label for="kinderen-nee">Nee
@@ -113,7 +140,8 @@
             </fieldset>
 
             <fieldset id="section-1d">
-                <legend>1d</legend>
+                <legend>Testament</legend>
+                <!-- <p>Beantwoord de volgende vragen.</p> -->
                 <fieldset>
                         <legend>Had de overledene een testament?</legend>
                         <label for="testament-nee">Nee

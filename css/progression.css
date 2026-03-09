@@ -1,26 +1,6 @@
-/* //////// */
-/* headings */
-/* //////// */
-h1 {
-    color: var(--ns-donkerblauw);
-    text-align: center;
-}
-
-
-
-/* ////// */
-/* labels */
-/* ////// */
-label {
-    display: block;
-    color: var(--ns-donkerblauw);
-}
-
-
-
-/* //////// */
-/* sections */
-/* //////// */
+/* ////////////////////// */
+/* progressive disclosure */
+/* ////////////////////// */
 
 /* bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:checked */
 
@@ -40,12 +20,12 @@ label {
 }
 
 /* test */
-#section-1a {
-    border: 3px solid red;
+/* #section-1a {
+    border: 3px solid var(--ns-geel);
 }
 #section-1a:not(:has(input:invalid)) {
     border: 3px solid green;
-}
+} */
 
 /* 1b-1 ja > 1b-2 */
 #section-1b:has(#partner-ja:checked)
@@ -131,67 +111,3 @@ label {
 }
 
 /* 1d-1 nee > volgende pagina / vraag 2 */
-
-
-
-/* ///////// */
-/* fieldsets */
-/* ///////// */
-fieldset {
-    background-color: var(--ns-wit);
-    color: var(--ns-donkerblauw);
-    margin: 1em;
-    border-color: var(--ns-lichtblauw);
-    border-style: solid;
-    border-width: .3em;
-    border-left-style: none;
-    border-right-style: none;
-    border-top-style: none;
-}
-
-#section-1b fieldset {
-    border-color: var(--ns-grijs);
-    border-width: .2em;
-}
-
-#section-1c fieldset {
-    border-color: var(--ns-grijs);
-    border-width: .2em;
-}
-
-#section-1d fieldset {
-    border-color: var(--ns-grijs);
-    border-width: .2em;
-}
-
-
-
-/* /////// */
-/* legends */
-/* /////// */
-legend {
-    margin-bottom: 1em;
-}
-
-
-
-/* ////// */
-/* inputs */
-/* ////// */
-input {
-    color: var(--ns-donkerblauw);
-    display: block;
-    margin: 1em;
-    margin-left: 0;
-    margin-bottom: 2em;
-}
-
-input[type="submit"] {
-    background-color: var(--ns-geel);
-    border-color: var(--ns-geel);
-    border-width: 1em;
-    border-style: solid;
-    border-radius: .5em;
-    display: block;
-    margin: 0 auto;
-}

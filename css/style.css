@@ -1,12 +1,39 @@
+/* ///////////////// */
 /* custom properties */
 /* ///////////////// */
 :root {
+    color-scheme: light dark;
+
+    /* basiskleuren */
     --ns-geel: #FFC917;
     --ns-donkerblauw: #003082;
     --ns-lichtblauw: #0063D3;
     --ns-wit: #FFFFFF;
     --ns-grijs: #E6E6E9;
-    --disclaimer-bg: #E0531F;
+    --disclaimer-bg: #DB0029;
+    --disclaimer-text: var(--ns-wit);
+
+    /* light theme */
+    --bg: var(--ns-grijs);
+    --fieldset-bg: var(--ns-wit);
+    --text: var(--ns-donkerblauw);
+    --input: var(--ns-wit);
+    --bottom-border: var(--ns-lichtblauw);
+    --accent: var(--ns-grijs);
+    --button: var(--ns-geel);
+}
+
+/* dark theme */
+@media (prefers-color-scheme: dark) {
+    :root {
+    --bg: var(--ns-grijs);
+    --fieldset-bg: var(--ns-wit);
+    --text: var(--ns-donkerblauw);
+    --input: var(--ns-wit);
+    --bottom-border: var(--ns-geel);
+    --accent: var(--ns-grijs);
+    --button: var(--ns-donkerblauw);
+    }
 }
 
 @font-face {
@@ -14,27 +41,122 @@
     src: url('../fonts/nssans-regular.woff2');
 }
 
+
+
+/* /////// */
 /* general */
-/* ////// */
+/* /////// */
 main {
     font-family: 'nssans-regular', sans-serif;
-    margin: 1em;
 }
 
 body {
-    background-color: var(--ns-grijs);
+    background-color: var(--bg);
+    margin: 0;
+    padding: 0;
 }
 
 
+
+/* //////// */
+/* headings */
+/* //////// */
+h1 {
+    color: var(--text);
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1.2em;
+    margin: 0;
+}
+
+h2 {
+    margin-left: 1.2em;
+    color: var(--text);
+    text-align: start;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}
+
+
+
+/* ////////////// */
+/* achtergrond h1 */
+/* ////////////// */
+section:first-of-type {
+    background-color: var(--ns-wit);
+}
+
+
+
+/* ///////////////// */
 /* opmaak disclaimer */
 /* ///////////////// */
-p {
+main p:first-of-type {
     text-align: center;
     background-color: var(--disclaimer-bg);
-    color: var(--ns-wit);
-    border-color: var(--disclaimer-bg);
-    border-style: solid;
-    border-width: 1em;
+    color: var(--disclaimer-text);
+    padding: 1em;
     text-transform: uppercase;
     font-weight: bold;
+    font-size: 1.3em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+
+/* /////////////////// */
+/* opmaak info details */
+/* /////////////////// */
+#info {
+    display: grid;
+    place-items: center;
+    background-color: var(--ns-geel);
+}
+
+#info details {
+    margin: 1em;
+    margin-bottom: 0;
+    width: 80%;
+    background-color: var(--fieldset-bg);
+    padding: 1em;
+    border-radius: .5em;
+    color: var(--text);
+}
+
+#info details:last-of-type {
+    margin-bottom: 1em;
+}
+
+#info summary {
+    font-weight: bold;
+}
+
+
+
+/* ///////////// */
+/* opmaak info p */
+/* ///////////// */
+#info p {
+    font-size: 1em;
+    margin: 1em;
+    margin-top: 1em;
+    text-align: left;
+    background-color: transparent;
+    color: var(--text);
+    padding: 0;
+    text-transform: none;
+    font-weight: normal;
+}
+
+#info li {
+    font-size: 1em;
+    margin-top: 1em;
+    margin-left: -1.5em;
+    text-align: left;
+    background-color: transparent;
+    color: var(--text);
+    padding: 0;
+    text-transform: none;
+    font-weight: normal;
 }

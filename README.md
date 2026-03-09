@@ -85,6 +85,16 @@ Gekregen feedback:
     jeppe: terugknop toevoegen, aan het einde een overzichtje maken van je antwoorden, ik zou css progressive disclosure toevoegen, validatie is goed gedaan
     lisa: je hebt heel goed zelfinzicht, de uitleg bij het formulier erbij is fijn en geeft context, css opsplitsen
 
+### Maandag 09/03
+**Wat heb ik vandaag gedaan?**  
+    ...
+**Hoeveel tijd heeft me dat gekost?**  
+    ...
+**Wat heb ik geleerd?**  
+    ...
+**Wat ga ik morgen doen?**  
+    ...
+
 ### Bronnen
 Set date input field's max date to today: https://stackoverflow.com/a/49916376
 :checked explanation: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:checked
