@@ -102,9 +102,9 @@ button[type="submit"] {
 
 
 
-/* ///////////////// */
-/* opmaak fieldset p */
-/* ///////////////// */
+/* //////////////////// */
+/* opmaak 1e fieldset p */
+/* //////////////////// */
 fieldset p:first-of-type {
     text-align: left;
     background-color: transparent;
@@ -113,4 +113,5 @@ fieldset p:first-of-type {
     text-transform: none;
     font-weight: normal;
     font-size: 1.1em;
+    margin-bottom: 1em;
 }

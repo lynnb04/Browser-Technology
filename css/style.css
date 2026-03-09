@@ -77,6 +77,15 @@ h2 {
     margin-bottom: 1em;
 }
 
+/* ?? */
+/* section h2:nth-of-type(2) {
+    margin-top: ?; 
+} */
+
+h2:first-of-type {
+    margin-top: 1.5em;
+}
+
 
 
 /* ////////////// */
@@ -103,6 +112,28 @@ main p:first-of-type {
     margin-bottom: 0;
 }
 
+section:first-of-type p {
+    font-size: 1em;
+    margin: 0;
+    margin-left: 1.5em;
+    text-align: left;
+    background-color: transparent;
+    color: var(--text);
+    padding: 0;
+    text-transform: none;
+    font-weight: normal;
+}
+
+section:first-of-type li {
+    font-size: 1em;
+    margin-top: 0.2em;
+    text-align: left;
+    background-color: transparent;
+    color: var(--text);
+    padding: 0;
+    text-transform: none;
+    font-weight: normal;
+}
 
 
 /* /////////////////// */
@@ -122,6 +153,7 @@ main p:first-of-type {
     padding: 1em;
     border-radius: .5em;
     color: var(--text);
+    cursor: pointer;
 }
 
 #info details:last-of-type {
