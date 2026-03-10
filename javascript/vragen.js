@@ -8,3 +8,9 @@ const today = new Date().toISOString().split("T")[0]; // bron: https://stackover
 date1.max = today;
 date2.max = today;
 date3.max = today;
+
+
+
+// /////////
+// validatie
+// /////////

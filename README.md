@@ -97,7 +97,7 @@ Gekregen feedback:
 
 ### Dinsdag 10/03
 **Wat heb ik vandaag gedaan?**  
-    ...
+    De Weekly Geek, toen heb ik een beetje styling gedaan en heb ik een deel van mijn code genest. 
 **Hoeveel tijd heeft me dat gekost?**  
     ...
 **Wat heb ik geleerd?**  

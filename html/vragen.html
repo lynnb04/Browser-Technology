@@ -18,6 +18,7 @@
         
         <section>
             <h1>Aangifteformulier erfbelasting</h1>
+            <p>Met dit formulier doet u aangifte erfbelasting voor een overlijden in 2026 voor alle personen en instellingen die iets krijgen uit de nalatenschap. Dit zijn verkrijgers.</p>
             <h2>Welke gegevens heeft u nodig?</h2>
             <p>Om aangifte erfbelasting te kunnen doen, hebt u bepaalde gegevens nodig. We hebben een aantal van deze gegevens voor u op een rij gezet:</p>
             <ul>
@@ -34,10 +35,6 @@
 
         <section id="info">
             <h2>Verdere informatie</h2>
-            <details>
-                <summary>Waarom dit formulier?</summary>
-                <p>Met dit formulier doet u aangifte erfbelasting voor een overlijden in 2026 voor alle personen en instellingen die iets krijgen uit de nalatenschap. Dit zijn verkrijgers.</p>
-            </details>
             <details>
                 <summary>Wie moet aangifte doen?</summary>
                 <p>Is er iemand als executeur aangewezen in het testament? En heeft die persoon geaccepteerd om executeur te zijn? Dan doet de executeur aangifte erfbelasting.</p>
@@ -60,7 +57,7 @@
                     <legend>Persoonsgegevens</legend>
                     <p>Vul in de onderstaande vakken de persoonsgegevens van de overledene in.</p>
                         <label for="voorletters-overledene">Voorletter(s)
-                            <input type="text" id="voorletters-overledene" name="voorletters-overledene" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ' -]{2,50}$" required /> <!-- value opslaan met javascript -->
+                            <input type="text" id="voorletters-overledene" name="voorletters-overledene" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ' -]{2,50}$" required />
                         </label>
 
                         <label for="tussenvoegsels-overledene">Tussenvoegsel(s)
@@ -86,37 +83,37 @@
                         <fieldset>
                             <legend>Was de overledene getrouwd of had de overledene een geregistreerde partner op het moment van overlijden?</legend>
                             <label for="partner-nee">Nee
-                                <input type="radio" id="partner-nee" name="partner" value="Nee" />
+                                <input type="radio" id="partner-nee" name="partner" value="Nee" required />
                             </label>
                             <label for="partner-ja">Ja
-                                <input type="radio" id="partner-ja" name="partner" value="Ja" />
+                                <input type="radio" id="partner-ja" name="partner" value="Ja" required />
                             </label>
                         </fieldset>
 
                         <fieldset>
                             <legend>Hadden de overledene en diens echtgenoot of geregistreerde partner huwelijkse of partnerschapsvoorwaarden laten vast leggen in een notariële akte?</legend>
                             <label for="akte-nee">Nee
-                                <input type="radio" id="akte-nee" name="notariele-akte" value="Nee" />
+                                <input type="radio" id="akte-nee" name="notariele-akte" value="Nee" required />
                             </label>
                             <label for="akte-ja">Ja
-                                <input type="radio" id="akte-ja" name="notariele-akte" value="Ja" /> <!-- bestand upload verschijnt -->
+                                <input type="radio" id="akte-ja" name="notariele-akte" value="Ja" required /> <!-- bestand upload verschijnt -->
                             </label>
                         </fieldset>
 
                         <fieldset>
                             <legend>Hadden de overledene en diens partner een finaal verrekenbeding?</legend>
                             <label for="beding-nee">Nee
-                                <input type="radio" id="beding-nee" name="verrekenbeding" value="Nee" />
+                                <input type="radio" id="beding-nee" name="verrekenbeding" value="Nee" required />
                             </label>
                             <label for="beding-ja">Ja
-                                <input type="radio" id="beding-ja" name="verrekenbeding" value="Ja" />
+                                <input type="radio" id="beding-ja" name="verrekenbeding" value="Ja" required />
                             </label>
                         </fieldset>
 
                         <fieldset>
                             <legend>Datum huwelijkse of partnerschapsvoorwaarden</legend>
                             <label for="partnerschapsvoorwaarden">
-                                <input type="date" id="datum-2" name="partnerschapsvoorwaarden" required /> <!-- bron: https://stackoverflow.com/a/49916376 -->                
+                                <input type="date" id="datum-2" name="partnerschapsvoorwaarden" /> <!-- bron: https://stackoverflow.com/a/49916376 -->                
                             </label>
                         </fieldset>
                 </fieldset>
@@ -127,28 +124,28 @@
                     <fieldset>
                             <legend>Had de overledene kinderen?</legend>
                             <label for="kinderen-nee">Nee
-                                <input type="radio" id="kinderen-nee" name="kinderen" value="Nee" />
+                                <input type="radio" id="kinderen-nee" name="kinderen" value="Nee" required />
                             </label>
                             <label for="kinderen-ja">Ja
-                                <input type="radio" id="kinderen-ja" name="kinderen" value="Ja" />
+                                <input type="radio" id="kinderen-ja" name="kinderen" value="Ja" required />
                             </label>
                     </fieldset>
                     <fieldset>
                             <legend>Is 1 van deze kinderen eerder overleden dan de overledene voor wie u nu aangifte doet?</legend>
                             <label for="overleden-kind-nee">Nee
-                                <input type="radio" id="overleden-kind-nee" name="overleden-kind" value="Nee" />
+                                <input type="radio" id="overleden-kind-nee" name="overleden-kind" value="Nee" required />
                             </label>
                             <label for="overleden-kind-ja">Ja
-                                <input type="radio" id="overleden-kind-ja" name="overleden-kind" value="Ja" />
+                                <input type="radio" id="overleden-kind-ja" name="overleden-kind" value="Ja" required />
                             </label>
                     </fieldset>
                     <fieldset>
                             <legend>Had dit overleden kind zelf kinderen?</legend>
                             <label for="kinderen-van-nee">Nee
-                                <input type="radio" id="kinderen-van-nee" name="kinderen-van" value="Nee" />
+                                <input type="radio" id="kinderen-van-nee" name="kinderen-van" value="Nee" required />
                             </label>
                             <label for="kinderen-van-ja">Ja
-                                <input type="radio" id="kinderen-van-ja" name="kinderen-van" value="Ja" />
+                                <input type="radio" id="kinderen-van-ja" name="kinderen-van" value="Ja" required />
                             </label>
                     </fieldset>
                 </fieldset>
@@ -159,10 +156,10 @@
                     <fieldset>
                             <legend>Had de overledene een testament?</legend>
                             <label for="testament-nee">Nee
-                                <input type="radio" id="testament-nee" name="testament" value="Nee" />
+                                <input type="radio" id="testament-nee" name="testament" value="Nee" required />
                             </label>
                             <label for="testament-ja">Ja
-                                <input type="radio" id="testament-ja" name="testament" value="Ja" />
+                                <input type="radio" id="testament-ja" name="testament" value="Ja" required />
                             </label>
                     </fieldset>
                     <fieldset>
