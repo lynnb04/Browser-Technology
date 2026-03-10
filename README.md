@@ -87,13 +87,23 @@ Gekregen feedback:
 
 ### Maandag 09/03
 **Wat heb ik vandaag gedaan?**  
-    CSS opgesplitst in verschillende bestanden voor overzicht. Vooral veel gedaan aan de styling om wat meer de NS huisstijl er in te krijgen. HTML validatie op voor- en achternaam gezet, hier moet ik later nog verder naar kijken.
+    CSS opgesplitst in verschillende bestanden voor overzicht. Vooral veel gedaan aan de styling om wat meer de NS huisstijl er in te krijgen. HTML validatie op voor- en achternaam gezet, hier moet ik later nog verder naar kijken. Tot slot heb ik de Weekly Geek voorbereid.    
 **Hoeveel tijd heeft me dat gekost?**  
-    Ik heb vandaag de hele dag code geschreven met een uur pauze tussendoor.
+    Ik heb vandaag de hele dag code geschreven met een uur pauze tussendoor. Weekly Geek was ik een uur mee bezig.    
 **Wat heb ik geleerd?**  
-    Ik wilde de legends graag in de fieldsets zetten met float, maar dat was te veel gedoe doordat alles versprong. Nu heb ik het opgelost door ze een achtergrond te geven die even breed is als de fieldset en deze te stylen.
+    Ik wilde de legends graag in de fieldsets zetten met float, maar dat was te veel gedoe doordat alles versprong. Nu heb ik het opgelost door ze een achtergrond te geven die even breed is als de fieldset en deze te stylen.    
 **Wat ga ik morgen doen?**  
-    Progression aanroeping van negatief naar positief veranderen. HTML validatie in orde maken en waar nodig JavaScript validatie toepassen.
+    Progression aanroeping van negatief naar positief veranderen. HTML validatie in orde maken en waar nodig JavaScript validatie toepassen. Verder met gekregen feedback verwerken.    
+
+### Dinsdag 10/03
+**Wat heb ik vandaag gedaan?**  
+    ...
+**Hoeveel tijd heeft me dat gekost?**  
+    ...
+**Wat heb ik geleerd?**  
+    ...
+**Wat ga ik morgen doen?**  
+    ...
 
 ### Bronnen
 Set date input field's max date to today: https://stackoverflow.com/a/49916376

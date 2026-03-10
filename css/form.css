@@ -6,6 +6,7 @@ fieldset {
     color: var(--text);
     margin: 1em;
     padding: 0;
+    padding-left: 1em;
     border-color: var(--bottom-border);
     border-style: solid;
     border-width: .3em;
@@ -19,16 +20,8 @@ fieldset fieldset {
     margin-left: 0;
 }
 
-#section-1b fieldset {
-    border-color: var(--accent);
-    border-width: .2em;
-}
-
-#section-1c fieldset {
-    border-color: var(--accent);
-    border-width: .2em;
-}
-
+#section-1b fieldset,
+#section-1c fieldset,
 #section-1d fieldset {
     border-color: var(--accent);
     border-width: .2em;
@@ -48,10 +41,11 @@ legend {
     display: block;
     margin: 0;
     margin-bottom: 1em;
+    margin-left: -0.8em;        /* weer goedzetten t.o.v. fieldset */
     font-size: 1.3em;
     background-color: var(--button);
     padding: 0.5em;
-    width: 100%;
+    width: calc(100% + 0.8em);
     box-sizing: border-box;
     border-top-left-radius: 0.5em;
     border-top-right-radius: 0.5em;
@@ -102,16 +96,17 @@ button[type="submit"] {
 
 
 
-/* //////////////////// */
-/* opmaak 1e fieldset p */
-/* //////////////////// */
-fieldset p:first-of-type {
-    text-align: left;
-    background-color: transparent;
-    color: var(--text);
-    padding: 0;
-    text-transform: none;
-    font-weight: normal;
-    font-size: 1.1em;
-    margin-bottom: 1em;
+/* ////////////////////////////////// */
+/* opmaak section gegevens overledene */
+/* ////////////////////////////////// */
+#vraag1-gegevens {
+    & h2 {
+        margin-top: 1.5em;
+    }
+
+    & p {
+        margin-top: 0;
+        margin-bottom: 1.5em;
+        font-size: 1.1em;
+    }
 }
