@@ -97,7 +97,26 @@ Gekregen feedback:
 
 ### Dinsdag 10/03
 **Wat heb ik vandaag gedaan?**  
-    De Weekly Geek, toen heb ik een beetje styling gedaan en heb ik een deel van mijn code genest. 
+    De Weekly Geek, toen heb ik een beetje styling gedaan en ik heb style.css genest. Ik ben eerder naar huis gegaan omdat ik me niet lekker voelde en heb later thuis nog verder gewerkt aan de progressive disclosure inkorten.    
+**Hoeveel tijd heeft me dat gekost?**  
+    Tot ongeveer half 3.
+
+### Voortgang week 3
+    ...
+
+### Maandag 16/03
+**Wat heb ik vandaag gedaan?**  
+    ...
+**Hoeveel tijd heeft me dat gekost?**  
+    ...
+**Wat heb ik geleerd?**  
+    ...
+**Wat ga ik morgen doen?**  
+    ...
+
+### Dinsdag 17/03
+**Wat heb ik vandaag gedaan?**  
+    ...
 **Hoeveel tijd heeft me dat gekost?**  
     ...
 **Wat heb ik geleerd?**  

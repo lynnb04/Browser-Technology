@@ -5,18 +5,19 @@
 /* bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:checked */
 
 /* standaard b c en d verbergen */
-#section-1b,
-#section-1c,
-#section-1d {
+:is(#section-1b, #section-1c, #section-1d) {
     display: none;
 }
 
+/* verberg alle velden behalve de startvelden binnen de secties */
+:is(#section-1b, #section-1c, #section-1d) > fieldset:not(:first-of-type) {
+    display: none;
+}
+
+/* --- SECTION 1A --- */
 /* 1a ingevuld, 1b-1 open */
 #section-1a:not(:has(input:invalid)) ~ #section-1b {
     display: block;
-}
-#section-1b > fieldset:not(:first-of-type) {
-    display: none;
 }
 
 /* test */
@@ -27,87 +28,55 @@
     border: 3px solid green;
 } */
 
-/* 1b-1 ja > 1b-2 */
-#section-1b:has(#partner-ja:checked)
-    > fieldset:nth-of-type(2) {
-    display: block;
+/* --- SECTION 1B --- */
+#section-1b {
+    /* 1b-1 ja > 1b-2 */
+    &:has(#partner-ja:checked) > fieldset:nth-of-type(2) {
+        display: block;
+    }
+
+    /* 1b-2 ja > 1b-3 */
+    &:has(#partner-ja:checked):has(#akte-ja:checked) > fieldset:nth-of-type(3) {
+        display: block;
+    }
+
+    /* 1b-3 ja > 1b-4 */
+    &:has(#partner-ja:checked):has(#akte-ja:checked):has(#beding-ja:checked) > fieldset:nth-of-type(4) {
+        display: block;
+    }
+
+    /* Alle "nee" opties of wanneer alles geldig is -> ga naar 1c */
+    &:has(#partner-nee:checked, #akte-nee:checked, #beding-nee:checked) ~ #section-1c,
+    &:not(:has(input:invalid)) ~ #section-1c {
+        display: block;
+    }
 }
 
-/* 1b-1 nee > 1c */
-#section-1b:has(#partner-nee:checked) ~ #section-1c {
-    display: block;
-}
-#section-1c > fieldset:not(:first-of-type) {
-    display: none;
+/* --- SECTION 1C --- */
+#section-1c {
+    /* 1c-1 ja > 1c-2 */
+    &:has(#kinderen-ja:checked) > fieldset:nth-of-type(2) {
+        display: block;
+    }
+
+    /* 1c-2 ja > 1c-3 */
+    &:has(#kinderen-ja:checked):has(#overleden-kind-ja:checked) > fieldset:nth-of-type(3) {
+        display: block;
+    }
+
+    /* Alle wegen naar #section-1d: "nee" keuzes 1 t/m 3 of "ja" op alles */
+    &:has(#kinderen-nee:checked, #overleden-kind-nee:checked, #kinderen-van-nee:checked) ~ #section-1d,
+    &:has(#kinderen-ja:checked):has(#overleden-kind-ja:checked):has(#kinderen-van-ja:checked) ~ #section-1d {
+        display: block;
+    }
 }
 
-/* 1b-2 ja > 1b-3 */
-#section-1b:has(#partner-ja:checked):has(#akte-ja:checked)
-    > fieldset:nth-of-type(3) {
-    display: block;
-}
+/* --- SECTION 1D --- */
+#section-1d {
+    /* 1d-1 ja > 1d-2 */
+    &:has(#testament-ja:checked) > fieldset:nth-of-type(2) {
+        display: block;
+    }
 
-/* 1b-2 nee > 1c */
-#section-1b:has(#akte-nee:checked) ~ #section-1c {
-    display: block;
+    /* 1d-1 nee > volgende pagina / vraag 2 */
 }
-
-/* 1b-3 ja > 1b-4 */
-#section-1b:has(#partner-ja:checked):has(#akte-ja:checked):has(#beding-ja:checked)
-    > fieldset:nth-of-type(4) {
-    display: block;
-}
-
-/* 1b-3 nee > 1c */
-#section-1b:has(#beding-nee:checked) ~ #section-1c {
-    display: block;
-}
-
-/* 1b ingevuld, 1c-1 open */
-#section-1b:not(:has(input:invalid)) ~ #section-1c {
-    display: block;
-}
-
-/* 1c-1 ja > 1c-2 */
-#section-1c:has(#kinderen-ja:checked)
-    > fieldset:nth-of-type(2) {
-    display: block;
-}
-
-/* 1c-1 nee > 1d */
-#section-1c:has(#kinderen-nee:checked) ~ #section-1d {
-    display: block;
-}
-#section-1d > fieldset:not(:first-of-type) {
-    display: none;
-}
-
-/* 1c-2 ja > 1c-3 */
-#section-1c:has(#kinderen-ja:checked):has(#overleden-kind-ja:checked)
-    > fieldset:nth-of-type(3) {
-    display: block;
-}
-
-/* 1c-2 nee > 1d */
-#section-1c:has(#overleden-kind-nee:checked) ~ #section-1d {
-    display: block;
-}
-
-/* 1c-3 ja > 1d */
-#section-1c:has(#kinderen-ja:checked):has(#overleden-kind-ja:checked):has(#kinderen-van-ja:checked)
-    ~ #section-1d {
-    display: block;
-}
-
-/* 1c-3 nee > 1d */
-#section-1c:has(#kinderen-van-nee:checked) ~ #section-1d {
-    display: block;
-}
-
-/* 1d-1 ja > 1d-2 */
-#section-1d:has(#testament-ja:checked)
-    > fieldset:nth-of-type(2) {
-    display: block;
-}
-
-/* 1d-1 nee > volgende pagina / vraag 2 */

@@ -88,10 +88,19 @@ input {
 button[type="submit"] {
     background-color: var(--button);
     padding: 1em;
-    border-color: var(--accent);
+    border: 5px var(--accent);
     border-radius: .5em;
     display: block;
     margin: 0 auto;
+
+    color: var(--text);
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--button-hover);
+    }
 }
 
 

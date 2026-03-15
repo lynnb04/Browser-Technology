@@ -21,6 +21,7 @@
     --bottom-border: var(--ns-lichtblauw);
     --accent: var(--ns-grijs);
     --button: var(--ns-geel);
+    --button-hover: #DEB01B;
 
     /* dark theme */
     @media (prefers-color-scheme: dark) {

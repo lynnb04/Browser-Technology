@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/form.css">
     <link rel="stylesheet" href="/css/progression.css">
+    <link rel="stylesheet" href="/css/validation.css">
 </head>
 
 
@@ -69,7 +70,7 @@
                         </label>
 
                         <label for="bsn-overledene">Bsn overledene
-                            <input type="text" id="bsn-overledene" name="bsn-overledene" pattern="[0-9]{9}" max="9" required />
+                            <input type="text" id="bsn-overledene" name="bsn-overledene" inputmode="numeric" pattern="[0-9]{9}" max="9" required />
                         </label>
 
                         <label for="overlijdensdatum">Overlijdensdatum
@@ -184,7 +185,7 @@
                     </fieldset>
                 </fieldset>
 
-                <button type="submit">Verzend</button>
+                <button type="submit">Verzenden</button>
             </form>
         </section>
     </main>
