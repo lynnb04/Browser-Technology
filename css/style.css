@@ -46,6 +46,10 @@ body {
 
 main {
     font-family: 'nssans-regular', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1em;
+    line-height: 1.6;
 
     /* disclaimer styling */
     & > p:first-of-type {
@@ -57,6 +61,7 @@ main {
         font-weight: bold;
         font-size: 1.3em;
         margin: 0;
+        margin-bottom: 2em;
     }
 }
 
@@ -65,49 +70,72 @@ main {
 /* //////// */
 h1 {
     color: var(--text);
-    text-align: center;
-    padding: 1em 0 0.5em;
-    margin: 0;
+    text-align: left;
+    padding: 0;
+    margin: 0 0 0.5em 0;
+    font-size: 2em;
 }
 
 h2 {
     color: var(--text);
-    text-align: start;
-    margin: 0 0 1em 1.2em;
+    text-align: left;
+    margin: 2em 0 1em 0;
 }
 
 /* /////////////// */
 /* section opmaak  */
 /* /////////////// */
 section:first-of-type {
-    background-color: var(--ns-wit);
+    background-color: var(--fieldset-bg);
+    margin: 1.5em;
+    padding: 2em;
+    border-radius: 0.8em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+
+    & h1 {
+        padding-top: 0;
+        text-align: left;
+        font-size: 2em;
+        margin-bottom: 0.5em;
+    }
+
+    & h2 {
+        margin-left: 0;
+        margin-top: 1.5em;
+    }
 
     & p, & li {
-        font-size: 1em;
+        font-size: 1.1em;
         color: var(--text);
         text-align: left;
     }
 
     & p {
-        margin: 0 1.5em 1.5em 1.5em;
+        margin: 0 0 1.5em 0;
     }
 
-    & p:first-of-type {
-        margin-bottom: 2em;
-    }
-
-    & p:nth-of-type(2) {
-        margin-top: -0.5em;
+    /* custom list styling */
+    & ul {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        background-color: transparent;
+        list-style-type: none; /* default bullets weghalen*/
+        padding-left: 0;
     }
 
     & li {
-        margin-top: 0.2em;
+        margin-bottom: 0.8em;
+        position: relative;
+        padding-left: 1.5em; /* ruimte voor custom bullet */
     }
 
-    & ul {
-        padding-bottom: 2em;
-        margin-bottom: 0;
-        background-color: var(--ns-wit);
+    & li::before {
+        content: "•";
+        color: var(--ns-lichtblauw); /* accent voor bullets */
+        font-size: 1.5em;
+        position: absolute;
+        left: 0;
+        top: -0.2em; /* align bullet met de tekst */
     }
 }
 
@@ -116,14 +144,7 @@ section:first-of-type {
         font-size: 1em;
         color: var(--text);
         text-align: left;
-    }
-
-    & p {
-        margin: 0 1.5em 1.5em 1.5em;
-    }
-
-    & p:first-of-type {
-        margin-bottom: 2em;
+        margin: 0 0 1.5em 0; /* consistente p styling */
     }
 }
 
@@ -137,29 +158,35 @@ section:first-of-type {
     flex-direction: column;
     align-items: center;
     background-color: var(--ns-geel);
+    padding: 2em;
+    border-radius: 0.8em;
+    box-sizing: border-box;
+    width: 100%;
 
     & h2 {
         align-self: flex-start;
         width: 100%;
-        padding-top: 1.5em;
-        margin-bottom: 0.5em;
+        margin-top: 0;
+        margin-bottom: 1em;
     }
 
     & details {
-        margin: 1em 1em 0;
-        width: 80%;
+        margin: 0 0 1em 0;
+        width: 100%;
+        box-sizing: border-box;
         background-color: var(--fieldset-bg);
-        padding: 1em;
+        padding: 1.5em;
         border-radius: 0.5em;
         color: var(--text);
         cursor: pointer;
 
         &:last-of-type {
-            margin-bottom: 2em;
+            margin-bottom: 0;
         }
 
         & summary {
             font-weight: bold;
+            font-size: 1.1em;
         }
 
         & p, & li {
@@ -169,12 +196,16 @@ section:first-of-type {
         }
 
         & p {
-            margin: 1em;
+            margin: 1em 0 0 0;
+        }
+
+        & ul {
+            padding-left: 1.5em;
+            margin-bottom: 0;
         }
 
         & li {
-            margin-top: 1em;
-            margin-left: -1.5em;
+            margin-top: 0.5em;
         }
     }
 }
