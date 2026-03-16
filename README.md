@@ -34,7 +34,7 @@ Mijn repo voor het vak Browser Technology
     Zorgen dat de volgende vragen verborgen worden als ze nog niet aan de beurt zijn.    
 
 
-### Voortgang week 1
+### Voortgang 1
 Gekregen feedback:    
 - (over het algemeen handig) Laat namen overeenkomen met wat er in de database staat
 - Bij id's een - er tussen i.p.v. camelcase, leest fijner
@@ -65,7 +65,7 @@ Gekregen feedback:
 **Wat ga ik de volgende les doen?**  
     Beginnen met vraag 2.    
 
-### Voortgang week 2
+### Voortgang 2
     Gekregen feedback:    
     - 1a 1b andere namen geven
     - required met javascript bij volgende vragen
@@ -101,19 +101,31 @@ Gekregen feedback:
 **Hoeveel tijd heeft me dat gekost?**  
     Tot ongeveer half 3.
 
-### Voortgang week 3
-    ...
-
 ### Maandag 16/03
 **Wat heb ik vandaag gedaan?**  
-    Vraag 2, styling, feedback verwerken,
-    - Radio buttons geel omdat ik dat een goed contrast vind geven ten opzichte van de achtergrond en de grijze basiskleur. Blauw leek te veel op de tekstkleur naar mijn mening.
+    Vraag 2 opgezet, verder gewerkt aan styling, feedback verwerken
+    Verwerkte feedback:
+    - 1a 1b andere namen geven
+    - styling meer op ns laten lijken
+    - nesten
+    - validatie gaan doen
+    - user valid user invalid
+    - feedback bij niet/verkeerd ingevulde velden
+    - progressive disclosure korter schrijven
+    - inputs stylen
+    
+    Radio buttons geel gemaakt, omdat ik dat een goed contrast vind geven ten opzichte van de achtergrond en de grijze basiskleur. Blauw leek te veel op de tekstkleur naar mijn mening.
 **Hoeveel tijd heeft me dat gekost?**  
-    ...
+    Styling 3 uur, validatie 3 uur
 **Wat heb ik geleerd?**  
-    ...
+    Meer geleerd over inputs stylen en hoe javascript validatie werkt
 **Wat ga ik morgen doen?**  
-    ...
+    - (bsn 11-proef misschien)
+    - progress bar / snapping
+    - :has not :has ect positief omdraaien
+    - belangrijke ontwerpkeuzes in readme zetten
+    - progressive disclosure afmaken
+    - validatie afmaken
 
 ### Dinsdag 17/03
 **Wat heb ik vandaag gedaan?**  
@@ -124,6 +136,26 @@ Gekregen feedback:
     ...
 **Wat ga ik morgen doen?**  
     ...
+
+### Voortgang 3
+Verwerkte feedback:
+- 1a 1b andere namen geven
+- styling meer op ns laten lijken
+- nesten
+- validatie gaan doen
+- user valid user invalid
+- feedback bij niet/verkeerd ingevulde velden
+- progressive disclosure korter schrijven
+- inputs stylen
+
+Nog te doen:
+- bsn 11-proef
+- progress bar / snapping
+- :has not :has ect positief omdraaien
+- belangrijke ontwerpkeuzes in readme zetten
+
+Gekregen feedback:
+
 
 ### Bronnen
 Set date input field's max date to today: https://stackoverflow.com/a/49916376
