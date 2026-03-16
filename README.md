@@ -138,22 +138,6 @@ Gekregen feedback:
     ...
 
 ### Voortgang 3
-Verwerkte feedback:
-- 1a 1b andere namen geven
-- styling meer op ns laten lijken
-- nesten
-- validatie gaan doen
-- user valid user invalid
-- feedback bij niet/verkeerd ingevulde velden
-- progressive disclosure korter schrijven
-- inputs stylen
-
-Nog te doen:
-- bsn 11-proef
-- progress bar / snapping
-- :has not :has ect positief omdraaien
-- belangrijke ontwerpkeuzes in readme zetten
-
 Gekregen feedback:
 
 
