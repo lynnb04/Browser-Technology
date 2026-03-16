@@ -77,6 +77,11 @@
     &:has(#testament-ja:checked) > fieldset:nth-of-type(2) {
         display: block;
     }
-
-    /* 1d-1 nee > volgende pagina / vraag 2 */
 }
+
+/* --- SECTION 2A --- */
+/* bsn gekozen, bsn open */
+
+/* becon gekozen, becon open */
+
+/* protocol gekozen, protocol open */

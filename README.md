@@ -106,7 +106,8 @@ Gekregen feedback:
 
 ### Maandag 16/03
 **Wat heb ik vandaag gedaan?**  
-    ...
+    Vraag 2, styling, feedback verwerken,
+    - Radio buttons geel omdat ik dat een goed contrast vind geven ten opzichte van de achtergrond en de grijze basiskleur. Blauw leek te veel op de tekstkleur naar mijn mening.
 **Hoeveel tijd heeft me dat gekost?**  
     ...
 **Wat heb ik geleerd?**  

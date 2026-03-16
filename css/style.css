@@ -76,9 +76,9 @@ h2 {
     margin: 0 0 1em 1.2em;
 }
 
-/* ////////////// */
-/* section logic  */
-/* ////////////// */
+/* /////////////// */
+/* section opmaak  */
+/* /////////////// */
 section:first-of-type {
     background-color: var(--ns-wit);
 
@@ -110,6 +110,24 @@ section:first-of-type {
         background-color: var(--ns-wit);
     }
 }
+
+#vraag2-gemachtigde {
+    & p {
+        font-size: 1em;
+        color: var(--text);
+        text-align: left;
+    }
+
+    & p {
+        margin: 0 1.5em 1.5em 1.5em;
+    }
+
+    & p:first-of-type {
+        margin-bottom: 2em;
+    }
+}
+
+
 
 /* /////////////////// */
 /* opmaak info details */

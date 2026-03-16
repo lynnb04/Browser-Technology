@@ -184,10 +184,42 @@
                         </label> 
                     </fieldset>
                 </fieldset>
-
-                <button type="submit">Verzenden</button>
-            </form>
         </section>
+
+        <section id="vraag2-gemachtigde">
+            <h2>Gegevens van de gemachtigde</h2>
+            <p>Vul de gegevens van de gemachtigde in. De gemachtigde is degene die namens 1 of meerdere personen en/of instellingen aangifte doet.</p>
+            <fieldset id="section-2a">
+                <legend>BSN/RSIN, Beconnummer of Protocolnummer</legend>
+                <fieldset>
+                    <legend>Kies de optie die bij uw situatie past.</legend>
+                    <label for="bsn">BSN/RSIN van de gemachtigde
+                        <input type="radio" id="bsn" name="kies" value="bsn" required />
+                    </label>
+                    <label for="beconnummer">Beconnummer van de adviseur
+                        <input type="radio" id="beconnummer" name="kies" value="beconnummer" required />
+                    </label>
+                    <label for="protocolnummer">Protocolnummer van de notaris
+                        <input type="radio" id="protocolnummer" name="kies" value="protocolnummer" required />
+                    </label>
+                </fieldset>
+                <fieldset id="bsn">
+                    <legend>Vul de BSN/RSIN van de gemachtigde in.</legend>
+                    <input type="text" id="bsn" name="bsn">
+                </fieldset>
+                <fieldset id="beconnummer">
+                    <legend>Vul het beconnummer van de adviseur in.</legend>
+                    <input type="becon" id="becon" name="becon">
+                </fieldset>
+                <fieldset id="protocolnummer">
+                    <legend>Vul het protocolnummer van de notaris in.</legend>
+                    <input type="protocol" id="protocol" name="protocol">
+                </fieldset>
+            </fieldset>
+        </section>
+
+            <button type="submit">Verzenden</button>
+            </form>
     </main>
 
     <script src="/javascript/vragen.js"></script>

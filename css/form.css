@@ -22,10 +22,14 @@ fieldset fieldset {
 
 #section-1b fieldset,
 #section-1c fieldset,
-#section-1d fieldset {
+#section-1d fieldset,
+#section-2a fieldset,
+#section-2b fieldset {
     border-color: var(--accent);
     border-width: .2em;
 }
+
+
 
 fieldset > * {
     margin-left: 1em;
@@ -65,6 +69,12 @@ label {
     display: block;
     color: var(--text);
     font-weight: bold;
+    margin-bottom: 1em;
+}
+
+label:has(input[type="radio"]) {
+    display: flex;                  /* radio + label horizontaal */
+    align-items: center;
 }
 
 
@@ -78,6 +88,22 @@ input {
     margin: 1em;
     margin-left: 0;
     margin-bottom: 2em;
+}
+
+input[type="radio"] {
+    appearance: none;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #999999;
+    transition: 0.2s all linear;
+    margin: 0;
+    margin-right: 0.5em;
+    order: -1;
+}
+
+input[type="radio"]:checked {
+    border: 5px solid var(--button);
 }
 
 
