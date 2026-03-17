@@ -3,6 +3,7 @@
 /* ///////////////// */
 :root {
     color-scheme: light dark;
+    interpolate-size: allow-keywords; /* Allows animating height: auto */
 
     /* basiskleuren */
     --ns-geel: #FFC917;
@@ -203,24 +204,48 @@ section:first-of-type {
         border-radius: 0.5em;
         color: var(--summary);
         cursor: pointer;
+        
+        /* Smooth height transition */
+        transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease;
+        overflow: hidden;
+        height: 4.5em; /* Approximate height of summary + padding */
+        box-sizing: border-box;
 
-        &:last-of-type {
-            margin-bottom: 0;
+        &[open] {
+            height: auto;
         }
 
         & summary {
             font-weight: bold;
             font-size: 1.1em;
+            list-style: none; /* remove default marker */
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+            transition: color 0.2s ease;
         }
 
-        & p, & li {
-            font-size: 1em;
-            text-align: left;
-            color: var(--summary);
+        & summary::before {
+            content: "▶";
+            font-size: 0.8em;
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            display: inline-block;
         }
 
-        & p {
+        &[open] summary::before {
+            transform: rotate(90deg);
+        }
+
+        & :is(p, ul) {
             margin: 1em 0 0 0;
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            
+            @starting-style {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
         }
 
         & ul {

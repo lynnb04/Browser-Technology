@@ -120,7 +120,7 @@ Gekregen feedback:
 **Wat heb ik geleerd?**  
     Meer geleerd over inputs stylen en hoe javascript validatie werkt
 **Wat ga ik morgen doen?**  
-    - (bsn 11-proef misschien)
+    - (11-proef misschien)
     - progress bar / snapping
     - :has not :has ect positief omdraaien
     - belangrijke ontwerpkeuzes in readme zetten
@@ -129,11 +129,19 @@ Gekregen feedback:
 
 ### Dinsdag 17/03
 **Wat heb ik vandaag gedaan?**  
-    validatie, html opgeschoond, light/dark
-    :has(input:valid) werkte niet, omdat dit true is zodra er minstens 1 geldig inputveld is. met :not erbij moeten er 0 ongeldige inputs zijn. ik heb dit veranderd naar :valid, nu werkt het wel.
-    vestigingsplaats kan met een api
+    Vandaag gedaan:
+    - :has not :has ect positief gemaakt. :has(input:valid) werkte niet, omdat dit true is zodra er minstens 1 geldig inputveld is. met :not erbij moeten er 0 ongeldige inputs zijn. ik heb dit veranderd naar :valid, nu werkt het wel.
+    - required toggle bij ja op volgende vragen
+    - custom error messages
+    - progressive disclosure afmaken
+    - validatie afmaken
+    - html opschonen
+    - light/dark mode
+    - subtiele animaties
+    - readme bijgewerkt
+    ik ben vandaag langer gebleven tot...
 **Hoeveel tijd heeft me dat gekost?**  
-    ...
+    Positief omdraaien was 1,5 uur en veel trial & error. toggles een uur, custom errors ook een uur, progressive disclosure afmaken was een half uur, validatie afmaken een uur, html opschonen een kwartiertje, light/dark mode een half uur, subtiele animaties was een half uur.
 **Wat heb ik geleerd?**  
     ...
 **Wat ga ik morgen doen?**  
@@ -143,8 +151,8 @@ Gekregen feedback:
 Gekregen feedback:
 
 
-
-
+### Wat had ik nog willen doen?
+en waarom is dit niet gelukt?
 
 
 

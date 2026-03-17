@@ -10,7 +10,7 @@
 }
 
 /* verberg alle velden behalve de startvelden binnen de secties */
-:is(#section-1b, #section-1c, #section-1d) > fieldset:not(:first-of-type) {
+:is(#section-1b, #section-1c, #section-1d)>fieldset:not(:first-of-type) {
     display: none;
 }
 
@@ -18,33 +18,39 @@
 
 /* --- SECTION 1A --- */
 /* 1a ingevuld, 1b-1 open */
-#section-1a:valid ~ #section-1b {
+#section-1a:valid~#section-1b {
     display: block;
+    animation: slideUpFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 
 
 /* --- SECTION 1B --- */
 #section-1b {
+
     /* 1b-1 ja > 1b-2 */
-    &:has(#partner-ja:checked) > fieldset:nth-of-type(2) {
+    &:has(#partner-ja:checked)>fieldset:nth-of-type(2) {
         display: block;
+        animation: slideUpFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
     /* 1b-2 ja > 1b-3 */
-    &:has(#partner-ja:checked):has(#akte-ja:checked) > fieldset:nth-of-type(3) {
+    &:has(#partner-ja:checked):has(#akte-ja:checked)>fieldset:nth-of-type(3) {
         display: block;
+        animation: slideUpFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
     /* 1b-3 ja > 1b-4 */
-    &:has(#partner-ja:checked):has(#akte-ja:checked):has(#beding-ja:checked) > fieldset:nth-of-type(4) {
+    &:has(#partner-ja:checked):has(#akte-ja:checked):has(#beding-ja:checked)>fieldset:nth-of-type(4) {
         display: block;
+        animation: slideUpFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
     /* Alle "nee" opties of wanneer alles geldig is -> ga naar 1c */
-    &:has(#partner-nee:checked, #akte-nee:checked, #beding-nee:checked) ~ #section-1c,
-    &:valid ~ #section-1c {
+    &:has(#partner-nee:checked, #akte-nee:checked, #beding-nee:checked)~#section-1c,
+    &:valid~#section-1c {
         display: block;
+        animation: slideUpFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 }
 
@@ -52,20 +58,24 @@
 
 /* --- SECTION 1C --- */
 #section-1c {
+
     /* 1c-1 ja > 1c-2 */
-    &:has(#kinderen-ja:checked) > fieldset:nth-of-type(2) {
+    &:has(#kinderen-ja:checked)>fieldset:nth-of-type(2) {
         display: block;
+        animation: slideUpFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
     /* 1c-2 ja > 1c-3 */
-    &:has(#kinderen-ja:checked):has(#overleden-kind-ja:checked) > fieldset:nth-of-type(3) {
+    &:has(#kinderen-ja:checked):has(#overleden-kind-ja:checked)>fieldset:nth-of-type(3) {
         display: block;
+        animation: slideUpFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
     /* Alle wegen naar #section-1d: "nee" keuzes 1 t/m 3 of "ja" op alles */
-    &:has(#kinderen-nee:checked, #overleden-kind-nee:checked, #kinderen-van-nee:checked) ~ #section-1d,
-    &:has(#kinderen-ja:checked):has(#overleden-kind-ja:checked):has(#kinderen-van-ja:checked) ~ #section-1d {
+    &:has(#kinderen-nee:checked, #overleden-kind-nee:checked, #kinderen-van-nee:checked)~#section-1d,
+    &:has(#kinderen-ja:checked):has(#overleden-kind-ja:checked):has(#kinderen-van-ja:checked)~#section-1d {
         display: block;
+        animation: slideUpFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 }
 
@@ -73,9 +83,11 @@
 
 /* --- SECTION 1D --- */
 #section-1d {
+
     /* 1d-1 ja > 1d-2 */
-    &:has(#testament-ja:checked) > fieldset:nth-of-type(2) {
+    &:has(#testament-ja:checked)>fieldset:nth-of-type(2) {
         display: block;
+        animation: slideUpFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 }
 
@@ -87,21 +99,17 @@
 
 /* --- SECTION 2A --- */
 #section-2a {
+
     /* Verberg de invulvelden standaard */
-    & > fieldset:not(:first-of-type) {
+    &>fieldset:not(:first-of-type) {
         display: none;
     }
 
     /* Toon het gekozen veld */
-    &:has(#kies-bsn:checked) > #fieldset-bsn {
+    &:has(#kies-bsn:checked)>#fieldset-bsn,
+    &:has(#kies-beconnummer:checked)>#fieldset-becon,
+    &:has(#kies-protocolnummer:checked)>#fieldset-protocol {
         display: block;
-    }
-
-    &:has(#kies-beconnummer:checked) > #fieldset-becon {
-        display: block;
-    }
-
-    &:has(#kies-protocolnummer:checked) > #fieldset-protocol {
-        display: block;
+        animation: slideUpFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 }

@@ -112,7 +112,7 @@ input[type="protocolnummer-notaris"] {
     width: 95%;
     box-sizing: border-box;
     color: var(--text);
-    transition: all 0.2s ease-in-out;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, transform 0.2s ease;
 }
 
 input[type="text"]:focus,
@@ -157,6 +157,23 @@ input[type="radio"] {
 
 input[type="radio"]:checked {
     border: 5px solid var(--button);
+    transform: scale(1.1);
+}
+
+/* file upload styling */
+input[type="file"] {
+    display: none;
+    margin: 0 0 0 1em; /* space to the right of the radio/label text */
+    font-size: 0.9em;
+    padding: 0.5em;
+    border: 2px dashed var(--ns-lichtblauw);
+    border-radius: 0.4em;
+    background-color: rgba(0, 99, 211, 0.05);
+}
+
+label:has(input[type="radio"]:checked) input[type="file"] {
+    display: inline-block;
+    animation: fadeIn 0.3s ease-out;
 }
 
 
@@ -177,8 +194,8 @@ button[type="submit"] {
     font-size: 1em;
     cursor: pointer;
 
-    &:hover {
-        background-color: var(--button-hover);
+    &:active {
+        transform: scale(0.98);
     }
 }
 
