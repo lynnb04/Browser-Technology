@@ -129,7 +129,9 @@ Gekregen feedback:
 
 ### Dinsdag 17/03
 **Wat heb ik vandaag gedaan?**  
-    ...
+    validatie, html opgeschoond, light/dark
+    :has(input:valid) werkte niet, omdat dit true is zodra er minstens 1 geldig inputveld is. met :not erbij moeten er 0 ongeldige inputs zijn. ik heb dit veranderd naar :valid, nu werkt het wel.
+    vestigingsplaats kan met een api
 **Hoeveel tijd heeft me dat gekost?**  
     ...
 **Wat heb ik geleerd?**  
@@ -139,6 +141,13 @@ Gekregen feedback:
 
 ### Voortgang 3
 Gekregen feedback:
+
+
+
+
+
+
+
 
 
 ### Bronnen

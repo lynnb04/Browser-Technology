@@ -18,7 +18,7 @@
 
 /* --- SECTION 1A --- */
 /* 1a ingevuld, 1b-1 open */
-#section-1a:not(:has(input:invalid)) ~ #section-1b {        /* :has(input:valid) werkt hier niet, omdat dit true is zodra er minstens 1 geldig inputveld is. met :not erbij moeten er 0 ongeldige inputs zijn */
+#section-1a:valid ~ #section-1b {
     display: block;
 }
 
@@ -43,7 +43,7 @@
 
     /* Alle "nee" opties of wanneer alles geldig is -> ga naar 1c */
     &:has(#partner-nee:checked, #akte-nee:checked, #beding-nee:checked) ~ #section-1c,
-    &:not(:has(input:invalid)) ~ #section-1c {      /* :has(input:valid) werkt hier niet, omdat dit true is zodra er minstens 1 geldig inputveld is. met :not erbij moeten er 0 ongeldige inputs zijn */
+    &:valid ~ #section-1c {
         display: block;
     }
 }
@@ -81,12 +81,27 @@
 
 
 
+/* 1a niet ingevuld, 1b, 1c, 1d dicht */
+
+
+
 /* --- SECTION 2A --- */
+#section-2a {
+    /* Verberg de invulvelden standaard */
+    & > fieldset:not(:first-of-type) {
+        display: none;
+    }
 
-/* bsn gekozen, bsn open */
+    /* Toon het gekozen veld */
+    &:has(#kies-bsn:checked) > #fieldset-bsn {
+        display: block;
+    }
 
+    &:has(#kies-beconnummer:checked) > #fieldset-becon {
+        display: block;
+    }
 
-/* becon gekozen, becon open */
-
-
-/* protocol gekozen, protocol open */
+    &:has(#kies-protocolnummer:checked) > #fieldset-protocol {
+        display: block;
+    }
+}

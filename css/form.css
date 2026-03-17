@@ -48,6 +48,7 @@ legend {
     margin-left: -0.8em;        /* weer goedzetten t.o.v. fieldset */
     font-size: 1.3em;
     background-color: var(--button);
+    color: var(--legend);
     padding: 0.5em;
     width: calc(100% + 0.8em);
     box-sizing: border-box;
@@ -58,6 +59,12 @@ legend {
 fieldset fieldset > legend {
     font-size: 1.1em;
     background-color: transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+    fieldset fieldset > legend {
+        color: var(--ns-donkerblauw);
+    }
 }
 
 
@@ -121,6 +128,7 @@ input[type="protocol"]:focus {
 /* datum picker tweaks */
 input[type="date"] {
     appearance: none;
+    color-scheme: light; /* Forceert licht-thema iconografie */
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
@@ -157,14 +165,14 @@ input[type="radio"]:checked {
 /* buttons */
 /* /////// */
 button[type="submit"] {
-    background-color: var(--button);
+    background-color: var(--ns-geel);
     padding: 1em;
     border: 5px var(--accent);
     border-radius: .5em;
     display: block;
     margin: 0 auto;
 
-    color: var(--text);
+    color: var(--ns-donkerblauw);
     font-weight: bold;
     font-size: 1em;
     cursor: pointer;

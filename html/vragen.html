@@ -16,21 +16,25 @@
 <body>
     <main>
         <p>!! Dit is een schoolproject !!</p>
-        
+
         <section>
             <h1>Aangifteformulier erfbelasting</h1>
-            <p>Met dit formulier doet u aangifte erfbelasting voor een overlijden in 2026 voor alle personen en instellingen die iets krijgen uit de nalatenschap. Dit zijn verkrijgers.</p>
+            <p>Met dit formulier doet u aangifte erfbelasting voor een overlijden in 2026 voor alle personen en
+                instellingen die iets krijgen uit de nalatenschap. Dit zijn verkrijgers.</p>
             <h2>Welke gegevens heeft u nodig?</h2>
-            <p>Om aangifte erfbelasting te kunnen doen, hebt u bepaalde gegevens nodig. We hebben een aantal van deze gegevens voor u op een rij gezet:</p>
+            <p>Om aangifte erfbelasting te kunnen doen, hebt u bepaalde gegevens nodig. We hebben een aantal van deze
+                gegevens voor u op een rij gezet:</p>
             <ul>
                 <li>bsn van de overledene</li>
                 <li>het testament van de overledene</li>
-                <li>WOZ -beschikkingen die de overledene heeft ontvangen van de gemeente. U kunt de waarde meestal ook online via wozwaardeloket.nl opzoeken.</li>
+                <li>WOZ -beschikkingen die de overledene heeft ontvangen van de gemeente. U kunt de waarde meestal ook
+                    online via wozwaardeloket.nl opzoeken.</li>
                 <li>overzichten van spaar- en effectenrekeningen van banken en andere instellingen</li>
                 <li>overzichten van hypotheken, leningen en andere schulden</li>
                 <li>verzekeringspolissen</li>
                 <li>huwelijksvoorwaarden, partnerschapsvoorwaarden of samenlevingscontract</li>
-                <li>andere overeenkomsten en akten (bijvoorbeeld een akte van verkoop van een woning aan kinderen van de overledene of een akte van schenking)</li>
+                <li>andere overeenkomsten en akten (bijvoorbeeld een akte van verkoop van een woning aan kinderen van de
+                    overledene of een akte van schenking)</li>
             </ul>
         </section>
 
@@ -38,8 +42,11 @@
             <h2>Verdere informatie</h2>
             <details>
                 <summary>Wie moet aangifte doen?</summary>
-                <p>Is er iemand als executeur aangewezen in het testament? En heeft die persoon geaccepteerd om executeur te zijn? Dan doet de executeur aangifte erfbelasting.</p>
-                <p>Is er geen executeur? Dan moeten de erfgenamen voor zichzelf en voor andere verkrijgers aangifte doen. Andere verkrijgers zijn bijvoorbeeld een kind dat een beroep doet op de legitieme portie of een persoon of instelling die een legaat krijgt.</p>
+                <p>Is er iemand als executeur aangewezen in het testament? En heeft die persoon geaccepteerd om
+                    executeur te zijn? Dan doet de executeur aangifte erfbelasting.</p>
+                <p>Is er geen executeur? Dan moeten de erfgenamen voor zichzelf en voor andere verkrijgers aangifte
+                    doen. Andere verkrijgers zijn bijvoorbeeld een kind dat een beroep doet op de legitieme portie of
+                    een persoon of instelling die een legaat krijgt.</p>
             </details>
             <details>
                 <summary>Hoe vult u het aangifteformulier in?</summary>
@@ -57,95 +64,105 @@
                 <fieldset id="section-1a">
                     <legend>Persoonsgegevens</legend>
                     <p>Vul in de onderstaande vakken de persoonsgegevens van de overledene in.</p>
-                        <label for="voorletters-overledene">Voorletter(s)
-                            <input type="text" id="voorletters-overledene" name="voorletters-overledene" pattern="^[A-Z ]{1,10}" required />
-                        </label>
+                    <label for="voorletters-overledene">Voorletter(s)
+                        <input type="text" id="voorletters-overledene" name="voorletters-overledene"
+                            pattern="^[A-Z ]{1,10}" required />
+                    </label>
 
-                        <label for="tussenvoegsels-overledene">Tussenvoegsel(s)
-                            <input type="text" id="tussenvoegsels-overledene" name="tussenvoegsels-overledene" />
-                        </label>
+                    <label for="tussenvoegsels-overledene">Tussenvoegsel(s)
+                        <input type="text" id="tussenvoegsels-overledene" name="tussenvoegsels-overledene" />
+                    </label>
 
-                        <label for="achternaam-overledene">Achternaam
-                            <input type="text" id="achternaam-overledene" name="achternaam-overledene" pattern="^[A-Z][a-zëöïäüéáúíó]+(?:-[A-Z][a-zëöïäüéáúíó]+)?$" required /> <!-- begin met een hoofdletter, gevolgd door een kleine letter, accenten toegestaan, optioneel een tweede naam -->
-                        </label>
+                    <label for="achternaam-overledene">Achternaam
+                        <input type="text" id="achternaam-overledene" name="achternaam-overledene"
+                            pattern="^[A-Z][a-zëöïäüéáúíó]+(?:-[A-Z][a-zëöïäüéáúíó]+)?$" required />
+                        <!-- begin met een hoofdletter, gevolgd door een kleine letter, accenten toegestaan, optioneel een tweede naam -->
+                    </label>
 
-                        <label for="bsn-overledene">Bsn overledene
-                            <input type="text" id="bsn-overledene" name="bsn-overledene" inputmode="numeric" pattern="[0-9]{9}" max="9" required />
-                        </label>
+                    <label for="bsn-overledene">Bsn overledene
+                        <input type="text" id="bsn-overledene" name="bsn-overledene" inputmode="numeric"
+                            pattern="[0-9]{9}" max="9" required />
+                    </label>
 
-                        <label for="overlijdensdatum">Overlijdensdatum
-                            <input type="date" id="datum-1" name="overlijdensdatum" required /> <!-- bron: https://stackoverflow.com/a/49916376 -->                
-                        </label>
+                    <label for="overlijdensdatum">Overlijdensdatum
+                        <input type="date" id="datum-1" name="overlijdensdatum" required />
+                        <!-- bron: https://stackoverflow.com/a/49916376 -->
+                    </label>
                 </fieldset>
 
                 <fieldset id="section-1b">
                     <legend>Trouwgegevens</legend>
-                        <fieldset>
-                            <legend>Was de overledene getrouwd of had de overledene een geregistreerde partner op het moment van overlijden?</legend>
-                            <label for="partner-nee">Nee
-                                <input type="radio" id="partner-nee" name="partner" value="Nee" required />
-                            </label>
-                            <label for="partner-ja">Ja
-                                <input type="radio" id="partner-ja" name="partner" value="Ja" required />
-                            </label>
-                        </fieldset>
+                    <fieldset>
+                        <legend>Was de overledene getrouwd of had de overledene een geregistreerde partner op het moment
+                            van overlijden?</legend>
+                        <label for="partner-nee">Nee
+                            <input type="radio" id="partner-nee" name="partner" value="Nee" required />
+                        </label>
+                        <label for="partner-ja">Ja
+                            <input type="radio" id="partner-ja" name="partner" value="Ja" required />
+                        </label>
+                    </fieldset>
 
-                        <fieldset>
-                            <legend>Hadden de overledene en diens echtgenoot of geregistreerde partner huwelijkse of partnerschapsvoorwaarden laten vast leggen in een notariële akte?</legend>
-                            <label for="akte-nee">Nee
-                                <input type="radio" id="akte-nee" name="notariele-akte" value="Nee" required />
-                            </label>
-                            <label for="akte-ja">Ja
-                                <input type="radio" id="akte-ja" name="notariele-akte" value="Ja" required /> <!-- bestand upload verschijnt -->
-                            </label>
-                        </fieldset>
+                    <fieldset>
+                        <legend>Hadden de overledene en diens echtgenoot of geregistreerde partner huwelijkse of
+                            partnerschapsvoorwaarden laten vast leggen in een notariële akte?</legend>
+                        <label for="akte-nee">Nee
+                            <input type="radio" id="akte-nee" name="notariele-akte" value="Nee" required />
+                        </label>
+                        <label for="akte-ja">Ja
+                            <input type="radio" id="akte-ja" name="notariele-akte" value="Ja" required />
+                            <!-- bestand upload verschijnt -->
+                        </label>
+                    </fieldset>
 
-                        <fieldset>
-                            <legend>Hadden de overledene en diens partner een finaal verrekenbeding?</legend>
-                            <label for="beding-nee">Nee
-                                <input type="radio" id="beding-nee" name="verrekenbeding" value="Nee" required />
-                            </label>
-                            <label for="beding-ja">Ja
-                                <input type="radio" id="beding-ja" name="verrekenbeding" value="Ja" required />
-                            </label>
-                        </fieldset>
+                    <fieldset>
+                        <legend>Hadden de overledene en diens partner een finaal verrekenbeding?</legend>
+                        <label for="beding-nee">Nee
+                            <input type="radio" id="beding-nee" name="verrekenbeding" value="Nee" required />
+                        </label>
+                        <label for="beding-ja">Ja
+                            <input type="radio" id="beding-ja" name="verrekenbeding" value="Ja" required />
+                        </label>
+                    </fieldset>
 
-                        <fieldset id="voorwaarden-datum">
-                            <legend>Datum huwelijkse of partnerschapsvoorwaarden</legend>
-                            <label for="partnerschapsvoorwaarden">
-                                <input type="date" id="datum-2" name="partnerschapsvoorwaarden" /> <!-- bron: https://stackoverflow.com/a/49916376 -->                
-                            </label>
-                        </fieldset>
+                    <fieldset id="voorwaarden-datum">
+                        <legend>Datum huwelijkse of partnerschapsvoorwaarden</legend>
+                        <label for="partnerschapsvoorwaarden">
+                            <input type="date" id="datum-2" name="partnerschapsvoorwaarden" />
+                            <!-- bron: https://stackoverflow.com/a/49916376 -->
+                        </label>
+                    </fieldset>
                 </fieldset>
 
                 <fieldset id="section-1c">
                     <legend>Kinderen</legend>
                     <fieldset>
-                            <legend>Had de overledene kinderen?</legend>
-                            <label for="kinderen-nee">Nee
-                                <input type="radio" id="kinderen-nee" name="kinderen" value="Nee" required />
-                            </label>
-                            <label for="kinderen-ja">Ja
-                                <input type="radio" id="kinderen-ja" name="kinderen" value="Ja" required />
-                            </label>
+                        <legend>Had de overledene kinderen?</legend>
+                        <label for="kinderen-nee">Nee
+                            <input type="radio" id="kinderen-nee" name="kinderen" value="Nee" required />
+                        </label>
+                        <label for="kinderen-ja">Ja
+                            <input type="radio" id="kinderen-ja" name="kinderen" value="Ja" required />
+                        </label>
                     </fieldset>
                     <fieldset>
-                            <legend>Is 1 van deze kinderen eerder overleden dan de overledene voor wie u nu aangifte doet?</legend>
-                            <label for="overleden-kind-nee">Nee
-                                <input type="radio" id="overleden-kind-nee" name="overleden-kind" value="Nee" required />
-                            </label>
-                            <label for="overleden-kind-ja">Ja
-                                <input type="radio" id="overleden-kind-ja" name="overleden-kind" value="Ja" required />
-                            </label>
+                        <legend>Is 1 van deze kinderen eerder overleden dan de overledene voor wie u nu aangifte doet?
+                        </legend>
+                        <label for="overleden-kind-nee">Nee
+                            <input type="radio" id="overleden-kind-nee" name="overleden-kind" value="Nee" required />
+                        </label>
+                        <label for="overleden-kind-ja">Ja
+                            <input type="radio" id="overleden-kind-ja" name="overleden-kind" value="Ja" required />
+                        </label>
                     </fieldset>
                     <fieldset>
-                            <legend>Had dit overleden kind zelf kinderen?</legend>
-                            <label for="kinderen-van-nee">Nee
-                                <input type="radio" id="kinderen-van-nee" name="kinderen-van" value="Nee" required />
-                            </label>
-                            <label for="kinderen-van-ja">Ja
-                                <input type="radio" id="kinderen-van-ja" name="kinderen-van" value="Ja" required />
-                            </label>
+                        <legend>Had dit overleden kind zelf kinderen?</legend>
+                        <label for="kinderen-van-nee">Nee
+                            <input type="radio" id="kinderen-van-nee" name="kinderen-van" value="Nee" required />
+                        </label>
+                        <label for="kinderen-van-ja">Ja
+                            <input type="radio" id="kinderen-van-ja" name="kinderen-van" value="Ja" required />
+                        </label>
                     </fieldset>
                 </fieldset>
 
@@ -162,22 +179,27 @@
                     </fieldset>
                     <fieldset id="notaris-gegevens">
                         <label for="protocolnummer-notaris">Protocolnummer notaris
-                            <input type="text" id="protocolnummer-notaris" name="protocolnummer-notaris" inputmode="numeric" pattern="[0-9]{6}" max="6" />
+                            <input type="text" id="protocolnummer-notaris" name="protocolnummer-notaris"
+                                inputmode="numeric" pattern="[0-9]{6}" max="6" />
                         </label>
                         <label for="voorletters-notaris">Voorletter(s)
-                            <input type="text" id="voorletters-notaris" name="voorletters-notaris" pattern="^[A-Z ]{1,10}" />
+                            <input type="text" id="voorletters-notaris" name="voorletters-notaris"
+                                pattern="^[A-Z ]{1,10}" />
                         </label>
                         <label for="tussenvoegsel-notaris">Tussenvoegsel(s)
                             <input type="text" id="tussenvoegsel-notaris" name="tussenvoegsel-notaris" />
                         </label>
                         <label for="achternaam-notaris">Achternaam
-                            <input type="text" id="achternaam-notaris" name="achternaam-notaris" pattern="^[A-Z][a-zëöïäüéáúíó]+(?:-[A-Z][a-zëöïäüéáúíó]+)?$" /> <!-- begin met een hoofdletter, gevolgd door een kleine letter, accenten toegestaan, optioneel een tweede naam -->
+                            <input type="text" id="achternaam-notaris" name="achternaam-notaris"
+                                pattern="^[A-Z][a-zëöïäüéáúíó]+(?:-[A-Z][a-zëöïäüéáúíó]+)?$" />
+                            <!-- begin met een hoofdletter, gevolgd door een kleine letter, accenten toegestaan, optioneel een tweede naam -->
                         </label>
                         <label for="vestigingsplaats-notaris">Vestigingsplaats
                             <input type="text" id="vestigingsplaats-notaris" name="vestigingsplaats-notaris" />
                         </label>
                         <label for="datum-testament">Datum van (de laatste wijziging van) het testament
-                            <input type="date" id="datum-3" name="datum-testament" /> <!-- bron: https://stackoverflow.com/a/49916376 -->                   
+                            <input type="date" id="datum-3" name="datum-testament" />
+                            <!-- bron: https://stackoverflow.com/a/49916376 -->
                         </label>
                     </fieldset>
                 </fieldset>
@@ -185,38 +207,42 @@
 
         <section id="vraag2-gemachtigde">
             <h2>Gegevens van de gemachtigde</h2>
-            <p>Vul de gegevens van de gemachtigde in. De gemachtigde is degene die namens 1 of meerdere personen en/of instellingen aangifte doet.</p>
+            <p>Vul de gegevens van de gemachtigde in. De gemachtigde is degene die namens 1 of meerdere personen en/of
+                instellingen aangifte doet.</p>
             <fieldset id="section-2a">
                 <legend>BSN/RSIN, Beconnummer of Protocolnummer</legend>
                 <fieldset>
                     <legend>Kies de optie die bij uw situatie past.</legend>
-                    <label for="bsn">BSN/RSIN van de gemachtigde
-                        <input type="radio" id="bsn" name="kies" required />
+                    <label for="kies-bsn">BSN/RSIN van de gemachtigde
+                        <input type="radio" id="kies-bsn" name="kies" required />
                     </label>
-                    <label for="beconnummer">Beconnummer van de adviseur
-                        <input type="radio" id="beconnummer" name="kies" required />
+                    <label for="kies-beconnummer">Beconnummer van de adviseur
+                        <input type="radio" id="kies-beconnummer" name="kies" required />
                     </label>
-                    <label for="protocolnummer">Protocolnummer van de notaris
-                        <input type="radio" id="protocolnummer" name="kies" required />
+                    <label for="kies-protocolnummer">Protocolnummer van de notaris
+                        <input type="radio" id="kies-protocolnummer" name="kies" required />
                     </label>
                 </fieldset>
-                <fieldset id="bsn">
+                <fieldset id="fieldset-bsn">
                     <legend>Vul de BSN/RSIN van de gemachtigde in.</legend>
-                    <input type="text" id="bsn" name="bsn">
+                    <input type="text" id="bsn-gemachtigde" name="bsn" inputmode="numeric" pattern="[0-9]{9}"
+                        maxlength="9" />
                 </fieldset>
-                <fieldset id="beconnummer">
+                <fieldset id="fieldset-becon">
                     <legend>Vul het beconnummer van de adviseur in.</legend>
-                    <input type="becon" id="becon" name="becon">
+                    <input type="text" id="becon-gemachtigde" name="becon" inputmode="numeric" pattern="[0-9]{6}"
+                        maxlength="6" />
                 </fieldset>
-                <fieldset id="protocolnummer-notaris">
+                <fieldset id="fieldset-protocol">
                     <legend>Vul het protocolnummer van de notaris in.</legend>
-                    <input type="text" id="protocolnummer-notaris" name="protocolnummer-notaris" inputmode="numeric" pattern="[0-9]{6}" max="6" />
+                    <input type="text" id="protocol-gemachtigde" name="protocolnummer-notaris" inputmode="numeric"
+                        pattern="[0-9]{6}" maxlength="6" />
                 </fieldset>
             </fieldset>
         </section>
 
-            <button type="submit">Verzenden</button>
-            </form>
+        <button type="submit">Verzenden</button>
+        </form>
     </main>
 
     <script src="/javascript/vragen.js"></script>

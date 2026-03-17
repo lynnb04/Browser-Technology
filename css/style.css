@@ -17,16 +17,25 @@
     --bg: var(--ns-grijs);
     --fieldset-bg: var(--ns-wit);
     --text: var(--ns-donkerblauw);
+    --heading: var(--ns-donkerblauw);
+    --legend: var(--ns-donkerblauw);
     --input: var(--ns-wit);
     --bottom-border: var(--ns-lichtblauw);
+    --details: var(--ns-donkerblauw);
+    --summary: var(--ns-wit);
     --accent: var(--ns-grijs);
     --button: var(--ns-geel);
     --button-hover: #DEB01B;
 
     /* dark theme */
     @media (prefers-color-scheme: dark) {
+        --bg: #999999;
+        --fieldset-bg: var(--ns-grijs);
         --bottom-border: var(--ns-geel);
         --button: var(--ns-donkerblauw);
+        --heading: var(--ns-wit);
+        --legend: var(--ns-wit);
+        --accent: var(--ns-wit);
     }
 }
 
@@ -146,7 +155,7 @@ section:first-of-type {
 
     & li::before {
         content: "•";
-        color: var(--ns-lichtblauw); /* accent voor bullets */
+        color: var(--bottom-border); /* accent voor bullets */
         font-size: 1.5em;
         position: absolute;
         left: 0;
@@ -189,10 +198,10 @@ section:first-of-type {
         margin: 0 0 1em 0;
         width: 100%;
         box-sizing: border-box;
-        background-color: var(--fieldset-bg);
+        background-color: var(--details);
         padding: 1.5em;
         border-radius: 0.5em;
-        color: var(--text);
+        color: var(--summary);
         cursor: pointer;
 
         &:last-of-type {
@@ -207,7 +216,7 @@ section:first-of-type {
         & p, & li {
             font-size: 1em;
             text-align: left;
-            color: var(--text);
+            color: var(--summary);
         }
 
         & p {

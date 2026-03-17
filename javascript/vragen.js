@@ -61,6 +61,70 @@ jaTestament.addEventListener("change", toggleRequired);
 neeTestament.addEventListener("change", toggleRequired);
 
 
+// required toggle op bsn/rsin, beconnummer en protocolnummer
+
+// radio buttons
+const kiesBsn = document.getElementById("kies-bsn");
+const kiesBecon = document.getElementById("kies-beconnummer");
+const kiesProtocol = document.getElementById("kies-protocolnummer");
+
+// fieldsets / inputs
+const bsnFieldset = document.getElementById("fieldset-bsn");
+const bsnKiesInput = document.getElementById("bsn-gemachtigde");
+
+const beconFieldset = document.getElementById("fieldset-becon");
+const beconKiesInput = document.getElementById("becon-gemachtigde");
+
+const protocolFieldset = document.getElementById("fieldset-protocol");
+const protocolKiesInput = document.getElementById("protocol-gemachtigde");
+
+// toggle function
+function toggleGemachtigdeFields() {
+    if (kiesBsn.checked) {
+        bsnKiesInput.required = true;
+        bsnKiesInput.disabled = false;
+
+        beconKiesInput.required = false;
+        beconKiesInput.disabled = true;
+
+        protocolKiesInput.required = false;
+        protocolKiesInput.disabled = true;
+    } else if (kiesBecon.checked) {
+        bsnKiesInput.required = false;
+        bsnKiesInput.disabled = true;
+
+        beconKiesInput.required = true;
+        beconKiesInput.disabled = false;
+
+        protocolKiesInput.required = false;
+        protocolKiesInput.disabled = true;
+    } else if (kiesProtocol.checked) {
+        bsnKiesInput.required = false;
+        bsnKiesInput.disabled = true;
+
+        beconKiesInput.required = false;
+        beconKiesInput.disabled = true;
+
+        protocolKiesInput.required = true;
+        protocolKiesInput.disabled = false;
+    } else {
+        bsnKiesInput.required = false;
+        bsnKiesInput.disabled = true;
+
+        beconKiesInput.required = false;
+        beconKiesInput.disabled = true;
+
+        protocolKiesInput.required = false;
+        protocolKiesInput.disabled = true;
+    }
+}
+
+// Event listeners
+kiesBsn.addEventListener("change", toggleGemachtigdeFields);
+kiesBecon.addEventListener("change", toggleGemachtigdeFields);
+kiesProtocol.addEventListener("change", toggleGemachtigdeFields);
+
+
 
 // Functie voor custom error messages
 function setCustomValidationMessage(inputElement, customMessage) {
@@ -117,6 +181,9 @@ setCustomValidationMessage(achternaamNotarisInput, "Begin met een hoofdletter en
 const bsnInput = document.getElementById('bsn-overledene');
 setCustomValidationMessage(bsnInput, "Een BSN moet uit exact 9 cijfers bestaan.");
 
+const bsnGemachtigdeInput = document.getElementById('bsn-gemachtigde');
+setCustomValidationMessage(bsnGemachtigdeInput, "Een BSN moet uit exact 9 cijfers bestaan.");
+
 // Overlijdensdatum (om rangeOverflow op te vangen voor de max="" attribuut die hierboven is ingesteld)
 setCustomValidationMessage(date1, "De datum mag niet in de toekomst liggen.");
 setCustomValidationMessage(date2, "De datum mag niet in de toekomst liggen.");
@@ -125,3 +192,10 @@ setCustomValidationMessage(date3, "De datum mag niet in de toekomst liggen.");
 // Protocolnummer: precies 6 cijfers
 const protocolInput = document.getElementById('protocolnummer-notaris');
 setCustomValidationMessage(protocolInput, "Het protocolnummer moet uit exact 6 cijfers bestaan.");
+
+const protocolGemachtigdeInput = document.getElementById('protocol-gemachtigde');
+setCustomValidationMessage(protocolGemachtigdeInput, "Het protocolnummer moet uit exact 6 cijfers bestaan.");
+
+// Beconnummer: precies 6 cijfers
+const beconGemachtigdeInput = document.getElementById('becon-gemachtigde');
+setCustomValidationMessage(beconGemachtigdeInput, "Het beconnummer moet uit exact 6 cijfers bestaan.");
