@@ -14,19 +14,15 @@
     display: none;
 }
 
+
+
 /* --- SECTION 1A --- */
 /* 1a ingevuld, 1b-1 open */
-#section-1a:not(:has(input:invalid)) ~ #section-1b {
+#section-1a:not(:has(input:invalid)) ~ #section-1b {        /* :has(input:valid) werkt hier niet, omdat dit true is zodra er minstens 1 geldig inputveld is. met :not erbij moeten er 0 ongeldige inputs zijn */
     display: block;
 }
 
-/* test */
-/* #section-1a {
-    border: 3px solid var(--ns-geel);
-}
-#section-1a:not(:has(input:invalid)) {
-    border: 3px solid green;
-} */
+
 
 /* --- SECTION 1B --- */
 #section-1b {
@@ -47,10 +43,12 @@
 
     /* Alle "nee" opties of wanneer alles geldig is -> ga naar 1c */
     &:has(#partner-nee:checked, #akte-nee:checked, #beding-nee:checked) ~ #section-1c,
-    &:not(:has(input:invalid)) ~ #section-1c {
+    &:not(:has(input:invalid)) ~ #section-1c {      /* :has(input:valid) werkt hier niet, omdat dit true is zodra er minstens 1 geldig inputveld is. met :not erbij moeten er 0 ongeldige inputs zijn */
         display: block;
     }
 }
+
+
 
 /* --- SECTION 1C --- */
 #section-1c {
@@ -71,6 +69,8 @@
     }
 }
 
+
+
 /* --- SECTION 1D --- */
 #section-1d {
     /* 1d-1 ja > 1d-2 */
@@ -79,9 +79,14 @@
     }
 }
 
+
+
 /* --- SECTION 2A --- */
+
 /* bsn gekozen, bsn open */
 
+
 /* becon gekozen, becon open */
+
 
 /* protocol gekozen, protocol open */

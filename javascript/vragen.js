@@ -15,6 +15,53 @@ if (date3) date3.max = today;
 // validatie
 // /////////
 
+// required toggle op datum partnerschapsvoorwaarden
+const bedingJa = document.getElementById("beding-ja");
+const bedingNee = document.getElementById("beding-nee");
+const datumFieldset = document.getElementById("voorwaarden-datum");
+
+const datumInput = datumFieldset.querySelector("input");
+
+function toggleDatumRequired() {
+    if (bedingJa.checked) {
+        datumInput.required = true;
+        datumInput.disabled = false;
+    } else {
+        datumInput.required = false;
+        datumInput.disabled = true;
+    }
+}
+
+bedingJa.addEventListener("change", toggleDatumRequired);
+bedingNee.addEventListener("change", toggleDatumRequired);
+
+
+// required toggle op notaris gegevens
+const jaTestament = document.getElementById("testament-ja");
+const neeTestament = document.getElementById("testament-nee");
+const notarisFieldset = document.getElementById("notaris-gegevens");
+
+const inputs = notarisFieldset.querySelectorAll("input:not(#tussenvoegsel-notaris)");
+
+function toggleRequired() {
+    if (jaTestament.checked) {
+        inputs.forEach(input => {
+            input.required = true;
+            input.disabled = false;
+        });
+    } else {
+        inputs.forEach(input => {
+            input.required = false;
+            input.disabled = true;
+        });
+    }
+}
+
+jaTestament.addEventListener("change", toggleRequired);
+neeTestament.addEventListener("change", toggleRequired);
+
+
+
 // Functie voor custom error messages
 function setCustomValidationMessage(inputElement, customMessage) {
     if (!inputElement) return;
@@ -38,7 +85,7 @@ function setCustomValidationMessage(inputElement, customMessage) {
     // Controleer tijdens het typen
     inputElement.addEventListener('input', () => {
         checkValidity();
-        // Forceer de browser om te checken (handig voor real-time CSS/JS validatie)
+        // Forceer de browser om te checken
         inputElement.reportValidity(); // Toont de bubble tijdens typen
     });
 
@@ -48,15 +95,23 @@ function setCustomValidationMessage(inputElement, customMessage) {
     });
 }
 
-// Pas validatie toe op specifieke velden
+// Pas validatie toe op specifieke velden:
 
-// Voorletters: alleen letters en leestekens, min 1, max 50
+// Voorletters: alleen letters en leestekens, min 1, max 10
 const voorlettersInput = document.getElementById('voorletters-overledene');
-setCustomValidationMessage(voorlettersInput, "Gebruik alleen letters, spaties, koppeltekens of apostrofs (minimaal 1 letter).");
+setCustomValidationMessage(voorlettersInput, "Gebruik alleen hoofdletters of spaties (minimaal 1 letter).");
 
-// Achternaam: alleen letters en leestekens, min 2, max 50
+const voorlettersNotarisInput = document.getElementById('voorletters-notaris');
+setCustomValidationMessage(voorlettersNotarisInput, "Gebruik alleen hoofdletters of spaties (minimaal 1 letter).");
+
+
+// Achternaam: alleen letters en leestekens, min 2
 const achternaamInput = document.getElementById('achternaam-overledene');
-setCustomValidationMessage(achternaamInput, "Gebruik alleen letters, spaties, koppeltekens of apostrofs (minimaal 2 letters).");
+setCustomValidationMessage(achternaamInput, "Begin met een hoofdletter en gebruik vervolgens alleen kleine letters, spaties of koppeltekens (minimaal 2 letters).");
+
+const achternaamNotarisInput = document.getElementById('achternaam-notaris');
+setCustomValidationMessage(achternaamNotarisInput, "Begin met een hoofdletter en gebruik vervolgens alleen kleine letters, spaties of koppeltekens (minimaal 2 letters).");
+
 
 // BSN: precies 9 cijfers
 const bsnInput = document.getElementById('bsn-overledene');
@@ -67,14 +122,6 @@ setCustomValidationMessage(date1, "De datum mag niet in de toekomst liggen.");
 setCustomValidationMessage(date2, "De datum mag niet in de toekomst liggen.");
 setCustomValidationMessage(date3, "De datum mag niet in de toekomst liggen.");
 
-// Protocolnummer
+// Protocolnummer: precies 6 cijfers
 const protocolInput = document.getElementById('protocolnummer-notaris');
-if (protocolInput) {
-    protocolInput.addEventListener('input', function() {
-        if (protocolInput.value.length > 6) {
-            protocolInput.setCustomValidity('Het protocolnummer mag uit maximaal 6 cijfers bestaan.');
-        } else {
-            protocolInput.setCustomValidity(''); 
-        }
-    });
-}
+setCustomValidationMessage(protocolInput, "Het protocolnummer moet uit exact 6 cijfers bestaan.");

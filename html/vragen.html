@@ -58,15 +58,15 @@
                     <legend>Persoonsgegevens</legend>
                     <p>Vul in de onderstaande vakken de persoonsgegevens van de overledene in.</p>
                         <label for="voorletters-overledene">Voorletter(s)
-                            <input type="text" id="voorletters-overledene" name="voorletters-overledene" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ' -]{2,50}$" required />
+                            <input type="text" id="voorletters-overledene" name="voorletters-overledene" pattern="^[A-Z ]{1,10}" required />
                         </label>
 
                         <label for="tussenvoegsels-overledene">Tussenvoegsel(s)
-                            <input type="text" id="tussenvoegsels-overledene" name="tussenvoegsels-overledene" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ' -]{0,20}$" />
+                            <input type="text" id="tussenvoegsels-overledene" name="tussenvoegsels-overledene" />
                         </label>
 
                         <label for="achternaam-overledene">Achternaam
-                            <input type="text" id="achternaam-overledene" name="achternaam-overledene" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ' -]{2,50}$" required />
+                            <input type="text" id="achternaam-overledene" name="achternaam-overledene" pattern="^[A-Z][a-zëöïäüéáúíó]+(?:-[A-Z][a-zëöïäüéáúíó]+)?$" required /> <!-- begin met een hoofdletter, gevolgd door een kleine letter, accenten toegestaan, optioneel een tweede naam -->
                         </label>
 
                         <label for="bsn-overledene">Bsn overledene
@@ -80,7 +80,6 @@
 
                 <fieldset id="section-1b">
                     <legend>Trouwgegevens</legend>
-                    <!-- <p>Vul de trouwgegevens van de overledene in.</p> -->
                         <fieldset>
                             <legend>Was de overledene getrouwd of had de overledene een geregistreerde partner op het moment van overlijden?</legend>
                             <label for="partner-nee">Nee
@@ -111,7 +110,7 @@
                             </label>
                         </fieldset>
 
-                        <fieldset>
+                        <fieldset id="voorwaarden-datum">
                             <legend>Datum huwelijkse of partnerschapsvoorwaarden</legend>
                             <label for="partnerschapsvoorwaarden">
                                 <input type="date" id="datum-2" name="partnerschapsvoorwaarden" /> <!-- bron: https://stackoverflow.com/a/49916376 -->                
@@ -121,7 +120,6 @@
 
                 <fieldset id="section-1c">
                     <legend>Kinderen</legend>
-                    <!-- <p>Beantwoord de volgende vragen.</p> -->
                     <fieldset>
                             <legend>Had de overledene kinderen?</legend>
                             <label for="kinderen-nee">Nee
@@ -153,35 +151,34 @@
 
                 <fieldset id="section-1d">
                     <legend>Testament</legend>
-                    <!-- <p>Beantwoord de volgende vragen.</p> -->
                     <fieldset>
-                            <legend>Had de overledene een testament?</legend>
-                            <label for="testament-nee">Nee
-                                <input type="radio" id="testament-nee" name="testament" value="Nee" required />
-                            </label>
-                            <label for="testament-ja">Ja
-                                <input type="radio" id="testament-ja" name="testament" value="Ja" required />
-                            </label>
+                        <legend>Had de overledene een testament?</legend>
+                        <label for="testament-nee">Nee
+                            <input type="radio" id="testament-nee" name="testament" value="Nee" required />
+                        </label>
+                        <label for="testament-ja">Ja
+                            <input type="radio" id="testament-ja" name="testament" value="Ja" required />
+                        </label>
                     </fieldset>
-                    <fieldset>
+                    <fieldset id="notaris-gegevens">
                         <label for="protocolnummer-notaris">Protocolnummer notaris
-                            <input type="number" id="protocolnummer-notaris" name="protocolnummer-notaris" inputtype="numeric" maxlength="6" /> <!-- validatie met javascript -->
+                            <input type="text" id="protocolnummer-notaris" name="protocolnummer-notaris" inputmode="numeric" pattern="[0-9]{6}" max="6" />
                         </label>
                         <label for="voorletters-notaris">Voorletter(s)
-                            <input type="text" id="voorletters-notaris" name="voorletters-notaris" />
+                            <input type="text" id="voorletters-notaris" name="voorletters-notaris" pattern="^[A-Z ]{1,10}" />
                         </label>
                         <label for="tussenvoegsel-notaris">Tussenvoegsel(s)
                             <input type="text" id="tussenvoegsel-notaris" name="tussenvoegsel-notaris" />
                         </label>
                         <label for="achternaam-notaris">Achternaam
-                            <input type="text" id="achternaam-notaris" name="achternaam-notaris" />
+                            <input type="text" id="achternaam-notaris" name="achternaam-notaris" pattern="^[A-Z][a-zëöïäüéáúíó]+(?:-[A-Z][a-zëöïäüéáúíó]+)?$" /> <!-- begin met een hoofdletter, gevolgd door een kleine letter, accenten toegestaan, optioneel een tweede naam -->
                         </label>
                         <label for="vestigingsplaats-notaris">Vestigingsplaats
                             <input type="text" id="vestigingsplaats-notaris" name="vestigingsplaats-notaris" />
-                        </label>  
+                        </label>
                         <label for="datum-testament">Datum van (de laatste wijziging van) het testament
                             <input type="date" id="datum-3" name="datum-testament" /> <!-- bron: https://stackoverflow.com/a/49916376 -->                   
-                        </label> 
+                        </label>
                     </fieldset>
                 </fieldset>
         </section>
@@ -194,13 +191,13 @@
                 <fieldset>
                     <legend>Kies de optie die bij uw situatie past.</legend>
                     <label for="bsn">BSN/RSIN van de gemachtigde
-                        <input type="radio" id="bsn" name="kies" value="bsn" required />
+                        <input type="radio" id="bsn" name="kies" required />
                     </label>
                     <label for="beconnummer">Beconnummer van de adviseur
-                        <input type="radio" id="beconnummer" name="kies" value="beconnummer" required />
+                        <input type="radio" id="beconnummer" name="kies" required />
                     </label>
                     <label for="protocolnummer">Protocolnummer van de notaris
-                        <input type="radio" id="protocolnummer" name="kies" value="protocolnummer" required />
+                        <input type="radio" id="protocolnummer" name="kies" required />
                     </label>
                 </fieldset>
                 <fieldset id="bsn">
@@ -213,7 +210,7 @@
                 </fieldset>
                 <fieldset id="protocolnummer-notaris">
                     <legend>Vul het protocolnummer van de notaris in.</legend>
-                    <input type="protocolnummer-notaris" id="protocolnummer-notaris" name="protocolnummer-notaris">
+                    <input type="text" id="protocolnummer-notaris" name="protocolnummer-notaris" inputmode="numeric" pattern="[0-9]{6}" max="6" />
                 </fieldset>
             </fieldset>
         </section>

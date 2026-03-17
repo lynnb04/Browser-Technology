@@ -143,4 +143,5 @@ Gekregen feedback:
 
 ### Bronnen
 Set date input field's max date to today: https://stackoverflow.com/a/49916376
-:checked explanation: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:checked
+:checked uitleg: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Selectors/:checked
+Regular expressions uitleg: https://a-tokyo.medium.com/first-and-last-name-validation-for-forms-and-databases-d3edf29ad29d
