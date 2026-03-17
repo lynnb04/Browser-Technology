@@ -3,7 +3,8 @@
 /* ///////////////// */
 :root {
     color-scheme: light dark;
-    interpolate-size: allow-keywords; /* Allows animating height: auto */
+    interpolate-size: allow-keywords;       /* bron: https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/interpolate-size */
+    /* animating height: auto */
 
     /* basiskleuren */
     --ns-geel: #FFC917;
@@ -60,9 +61,10 @@ main {
     margin: 0 auto;
     padding: 1em;
     line-height: 1.6;
+    transition: max-width 0.4s ease;
 
     /* disclaimer banner styling */
-    & > p:first-of-type {
+    &>p:first-of-type {
         text-align: center;
         background-color: var(--disclaimer-bg);
         color: var(--disclaimer-text);
@@ -72,7 +74,7 @@ main {
         letter-spacing: 0.5px;
         margin: 0;
         margin-bottom: 2.5em;
-        
+
         /* volledige paginabreedte ipv container */
         width: 100vw;
         position: relative;
@@ -80,6 +82,12 @@ main {
         right: 50%;
         margin-left: -50vw;
         margin-right: -50vw;
+    }
+}
+
+@media (min-width: 1024px) {
+    main {
+        max-width: 900px;
     }
 }
 
@@ -129,7 +137,8 @@ section:first-of-type {
         margin-top: 1.5em;
     }
 
-    & p, & li {
+    & p,
+    & li {
         font-size: 1.1em;
         color: var(--text);
         text-align: left;
@@ -144,23 +153,27 @@ section:first-of-type {
         padding-bottom: 0;
         margin-bottom: 0;
         background-color: transparent;
-        list-style-type: none; /* default bullets weghalen*/
+        list-style-type: none;
+        /* default bullets weghalen*/
         padding-left: 0;
     }
 
     & li {
         margin-bottom: 0.8em;
         position: relative;
-        padding-left: 1.5em; /* ruimte voor custom bullet */
+        padding-left: 1.5em;
+        /* ruimte voor custom bullet */
     }
 
     & li::before {
         content: "•";
-        color: var(--bottom-border); /* accent voor bullets */
+        color: var(--bottom-border);
+        /* accent voor bullets */
         font-size: 1.5em;
         position: absolute;
         left: 0;
-        top: -0.2em; /* align bullet met de tekst */
+        top: -0.2em;
+        /* align bullet met de tekst */
     }
 }
 
@@ -204,11 +217,11 @@ section:first-of-type {
         border-radius: 0.5em;
         color: var(--summary);
         cursor: pointer;
-        
-        /* Smooth height transition */
+
+        /* height transition */
         transition: height 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease;
         overflow: hidden;
-        height: 4.5em; /* Approximate height of summary + padding */
+        height: 4.5em;
         box-sizing: border-box;
 
         &[open] {
@@ -218,7 +231,8 @@ section:first-of-type {
         & summary {
             font-weight: bold;
             font-size: 1.1em;
-            list-style: none; /* remove default marker */
+            list-style: none;
+            /* haal de default marker weg */
             display: flex;
             align-items: center;
             gap: 0.5em;
@@ -241,7 +255,7 @@ section:first-of-type {
             opacity: 1;
             transform: translateY(0);
             transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            
+
             @starting-style {
                 opacity: 0;
                 transform: translateY(-10px);

@@ -4,15 +4,16 @@
 fieldset {
     background-color: var(--fieldset-bg);
     color: var(--text);
-    margin: 1em;
-    padding: 0;
-    padding-left: 1em;
+    margin: 1em 0;
+    padding: 0 1.5em 1.5em 1.5em;
     border-color: var(--bottom-border);
     border-style: solid;
     border-width: .3em;
     border-left-style: none;
     border-right-style: none;
     border-top-style: none;
+    box-sizing: border-box;
+    /* geen overflow door de padding */
 }
 
 fieldset fieldset {
@@ -31,9 +32,9 @@ fieldset fieldset {
 
 
 
-fieldset > * {
-    margin-left: 1em;
-    margin-right: 1em;
+fieldset>* {
+    margin-left: 0;
+    margin-right: 0;
 }
 
 
@@ -43,26 +44,28 @@ fieldset > * {
 /* /////// */
 legend {
     display: block;
-    margin: 0;
-    margin-bottom: 1em;
-    margin-left: -0.8em;        /* weer goedzetten t.o.v. fieldset */
+    margin: 0 0 1.5em -1.2em;
     font-size: 1.3em;
     background-color: var(--button);
     color: var(--legend);
-    padding: 0.5em;
-    width: calc(100% + 0.8em);
+    padding: 0.5em 0.5em;
+    width: calc(100% + 2.4em);
     box-sizing: border-box;
     border-top-left-radius: 0.5em;
     border-top-right-radius: 0.5em;
 }
 
-fieldset fieldset > legend {
+fieldset fieldset>legend {
     font-size: 1.1em;
     background-color: transparent;
+    margin: 0 0 1em 0;
+    /* reset margins voor genestte legends */
+    padding: 0;
+    width: auto;
 }
 
 @media (prefers-color-scheme: dark) {
-    fieldset fieldset > legend {
+    fieldset fieldset>legend {
         color: var(--ns-donkerblauw);
     }
 }
@@ -80,7 +83,8 @@ label {
 }
 
 label:has(input[type="radio"]) {
-    display: flex;                  /* radio + label horizontaal */
+    display: flex;
+    /* radio + label horizontaal */
     align-items: center;
 }
 
@@ -93,7 +97,8 @@ input {
     color: var(--text);
     display: block;
     margin: 1em 0 2em 0;
-    font-family: inherit; /* datum gebruikt ook nssans-regular */
+    font-family: inherit;
+    /* datum gebruikt ook nssans-regular */
 }
 
 /* globale styling */
@@ -108,8 +113,8 @@ input[type="protocolnummer-notaris"] {
     border-radius: 0.5em;
     padding: 0.8em 1em;
     font-size: 1.1em;
-    max-width: 400px;
-    width: 95%;
+    max-width: 100%;
+    width: 100%;
     box-sizing: border-box;
     color: var(--text);
     transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, transform 0.2s ease;
@@ -122,13 +127,14 @@ input[type="becon"]:focus,
 input[type="protocol"]:focus {
     outline: none;
     border-color: var(--ns-lichtblauw);
-    box-shadow: 0 0 0 3px rgba(0, 99, 211, 0.2); /* zachte blauwe gloed */
+    box-shadow: 0 0 0 3px rgba(0, 99, 211, 0.2);
+    /* zachte blauwe gloed */
 }
 
 /* datum picker tweaks */
 input[type="date"] {
     appearance: none;
-    color-scheme: light; /* Forceert licht-thema iconografie */
+    color-scheme: light;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator {
@@ -163,7 +169,7 @@ input[type="radio"]:checked {
 /* file upload styling */
 input[type="file"] {
     display: none;
-    margin: 0 0 0 1em; /* space to the right of the radio/label text */
+    margin: 0 0 0 1em;
     font-size: 0.9em;
     padding: 0.5em;
     border: 2px dashed var(--ns-lichtblauw);
@@ -213,5 +219,89 @@ button[type="submit"] {
         margin-top: 0;
         margin-bottom: 1.5em;
         font-size: 1.1em;
+    }
+}
+
+/* ///////////// */
+/* media queries */
+/* ///////////// */
+
+@media (min-width: 600px) {
+    fieldset {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 1.5rem;
+        align-items: end;
+    }
+
+    fieldset fieldset {
+        gap: 0.5rem;
+    }
+
+    legend {
+        grid-column: 1 / -1;
+    }
+
+    fieldset>p,
+    fieldset fieldset,
+    #voorwaarden-datum,
+    #notaris-gegevens,
+    #fieldset-bsn,
+    #fieldset-becon,
+    #fieldset-protocol {
+        grid-column: 1 / -1;
+    }
+
+    label[for="voorletters-overledene"],
+    label[for="voorletters-notaris"] {
+        grid-column: span 1;
+    }
+
+    label[for="tussenvoegsels-overledene"],
+    label[for="tussenvoegsel-notaris"] {
+        grid-column: span 1;
+    }
+
+    label[for="achternaam-overledene"],
+    label[for="achternaam-notaris"] {
+        grid-column: span 4;
+    }
+
+    label[for="bsn-overledene"],
+    label[for="overlijdensdatum"],
+    label[for="protocolnummer-notaris"],
+    label[for="vestigingsplaats-notaris"],
+    label[for="datum-testament"] {
+        grid-column: span 3;
+    }
+
+    label[for="partner-nee"],
+    label[for="partner-ja"],
+    label[for="akte-nee"],
+    label[for="akte-ja"],
+    label[for="beding-nee"],
+    label[for="beding-ja"],
+    label[for="kinderen-nee"],
+    label[for="kinderen-ja"],
+    label[for="overleden-kind-nee"],
+    label[for="overleden-kind-ja"],
+    label[for="kinderen-van-nee"],
+    label[for="kinderen-van-ja"],
+    label[for="testament-nee"],
+    label[for="testament-ja"] {
+        grid-column: span 6;
+        margin-bottom: 0.5em;
+    }
+
+    #section-2a fieldset:first-of-type {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    label[for="kies-bsn"],
+    label[for="kies-beconnummer"],
+    label[for="kies-protocolnummer"] {
+        grid-column: span 1;
     }
 }

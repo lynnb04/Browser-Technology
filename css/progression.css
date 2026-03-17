@@ -46,7 +46,7 @@
         animation: slideUpFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
-    /* Alle "nee" opties of wanneer alles geldig is -> ga naar 1c */
+    /* alle "nee" opties of wanneer alles geldig is -> ga naar 1c */
     &:has(#partner-nee:checked, #akte-nee:checked, #beding-nee:checked)~#section-1c,
     &:valid~#section-1c {
         display: block;
@@ -71,7 +71,7 @@
         animation: slideUpFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
-    /* Alle wegen naar #section-1d: "nee" keuzes 1 t/m 3 of "ja" op alles */
+    /* alle wegen naar #section-1d: "nee" keuzes 1 t/m 3 of "ja" op alles */
     &:has(#kinderen-nee:checked, #overleden-kind-nee:checked, #kinderen-van-nee:checked)~#section-1d,
     &:has(#kinderen-ja:checked):has(#overleden-kind-ja:checked):has(#kinderen-van-ja:checked)~#section-1d {
         display: block;
@@ -93,19 +93,15 @@
 
 
 
-/* 1a niet ingevuld, 1b, 1c, 1d dicht */
-
-
-
 /* --- SECTION 2A --- */
 #section-2a {
 
-    /* Verberg de invulvelden standaard */
+    /* verberg de invulvelden standaard */
     &>fieldset:not(:first-of-type) {
         display: none;
     }
 
-    /* Toon het gekozen veld */
+    /* toon het gekozen veld */
     &:has(#kies-bsn:checked)>#fieldset-bsn,
     &:has(#kies-beconnummer:checked)>#fieldset-becon,
     &:has(#kies-protocolnummer:checked)>#fieldset-protocol {

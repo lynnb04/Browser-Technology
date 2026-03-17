@@ -2,33 +2,31 @@
 /* form validation        */
 /* ////////////////////// */
 
-/* Basis styling voor onjuiste of lege verplichte velden (na interactie door user) */
+/* basis styling voor onjuiste of lege verplichte velden (na interactie door user) */
 input:user-invalid {
-    border: 2px solid #e1251b; /* Rode NS-kleur bijv */
+    border: 2px solid #e1251b; /* rode NS-kleur bijv */
     background-color: #fff0f0;
 }
 
-/* Basis styling voor correct ingevulde velden (na interactie door user) */
+/* basis styling voor correct ingevulde velden (na interactie door user) */
 input:user-valid {
-    border: 2px solid #00602B; /* Groene kleur bijv */
+    border: 2px solid #00602B; /* groene kleur bijv */
     background-color: #f0fff0;
 }
 
-/* Focus styles ter verbetering van toegankelijkheid en zichtbaarheid bij fouten */
+/* focus styles ter verbetering van toegankelijkheid en zichtbaarheid bij fouten */
 input:focus:user-invalid {
     outline: 2px solid #e1251b;
     outline-offset: 2px;
 }
 
-/* Verberg de submit knop / pas hem aan totdat het hele formulier geldig is */
+/* verberg de submit knop / pas hem aan totdat het hele formulier geldig is */
 form:invalid button[type="submit"] {
     opacity: 0.5;
-    pointer-events: none; /* Kan voorkomen dat user klikt */
+    pointer-events: none; /* kan voorkomen dat user klikt */
 }
 
 form:valid button[type="submit"] {
     opacity: 1;
     cursor: pointer;
 }
-
-/* Radio buttons */
